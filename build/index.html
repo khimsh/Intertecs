@@ -107,23 +107,28 @@
       <div class="address-info">
         <h1 class="c-title ka">საკონტაქტო ინფორმაცია</h1>
         <div itemscope itemtype="http://schema.org/Organization">
-          <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><i class="fa fa-map-marker"></i>
-            <p>  <span class="ka" itemprop="streetAddress">85 ფალიაშვილის ქ. </span><span class="ka" itemprop="addressLocality">თბილისი, საქართველო</span></p>
+          <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+            <p class="ka map-marker"><span itemprop="streetAddress"></span>85 ფალიაშვილის ქ. <span itemprop="addressLocality"></span> თბილისი, საქართველო</p>
             <p class="ka" itemprop="postalCode">ზიპ-კოდი: 0162</p>
-            <p class="ka" itemprop="telephone"><i class="fa fa-phone">+995 (32) 2 45 04 56</i></p><br><i class="fa fa-map-marker"></i><span class="ka">სერვის ცენტრი: <span itemprop="streetAddress"></span> კახეთის გ/ტ 106</span><br>
-          </div><i class="fa fa-fax"></i><span class="ka" itemprop="faxNumber">+995 (32) 2 45 04 56(9)</span><br><i class="fa fa-envelope"></i><span class="mail" itemprop="email"><a href="mailto:intertecs@caucasus.net">intertecs@caucasus.net</a></span>
+            <p class="ka phone" itemprop="telephone">+995 (32) 2 45 04 56</p>
+            <p class="ka map-marker">სერვის ცენტრი: <span itemprop="streetAddress"></span> კახეთის გ/ტ 106</p>
+          </div>
+          <p class="ka fax" itemprop="faxNumber">+995 (32) 2 45 04 56(9)</p>
+          <p class="envelope mail" itemprop="email"><a href="mailto:intertecs@caucasus.net">intertecs@caucasus.net</a></p>
         </div>
       </div>
-      <div class="address-map"></div>
-      <!-- Google map-->
-      <div id="map"></div>
+      <div class="address-map">
+        <div id="map"></div>
+      </div>
     </section>
     <footer id="footer">
-      <p>&copy; Intertecs.ge &#9679; 2018</p>
+      <p class="copyright">&copy; Intertecs.ge &#9679; 2018</p>
       <!-- Top.ge counter-->
       <div id="top-ge-counter-container" data-site-id="108307"></div>
       <script async src="//counter.top.ge/counter.js"></script>
       <!-- End of Top.ge counter-->
     </footer>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2revqu6ZJqUnD9llOalXP8mJdH-tWx8U&amp;callback=initMap"></script>
+    <script src="js/script.min.js"></script>
   </body>
 </html>

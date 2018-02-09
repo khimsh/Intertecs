@@ -63,28 +63,20 @@ html
                 h1.c-title.ka საკონტაქტო ინფორმაცია
                 div(itemscope, itemtype='http://schema.org/Organization')
                     div(itemprop="address" itemscope itemtype="http://schema.org/PostalAddress")
-                        i.fa.fa-map-marker
-                        p   
-                            span.ka(itemprop="streetAddress") 85 ფალიაშვილის ქ. 
-                            span.ka(itemprop="addressLocality") თბილისი, საქართველო
+                        p.ka.map-marker #[span(itemprop="streetAddress")]85 ფალიაშვილის ქ. #[span(itemprop="addressLocality")] თბილისი, საქართველო
                         p.ka(itemprop="postalCode") ზიპ-კოდი: 0162
-                        
-                        p.ka(itemprop="telephone"): i.fa.fa-phone +995 (32) 2 45 04 56
-                        br
-                        i.fa.fa-map-marker
-                        span.ka სერვის ცენტრი: #[span(itemprop="streetAddress")] კახეთის გ/ტ 106
-                        br
-                    i.fa.fa-fax
-                    span.ka(itemprop="faxNumber") +995 (32) 2 45 04 56(9)
-                    br
-                    i.fa.fa-envelope
-                    span(itemprop="email" class="mail"): a(href="mailto:intertecs@caucasus.net") intertecs@caucasus.net
+                        p.ka.phone(itemprop="telephone") +995 (32) 2 45 04 56
+                        p.ka.map-marker სერვის ცენტრი: #[span(itemprop="streetAddress")] კახეთის გ/ტ 106
+                    p.ka.fax(itemprop="faxNumber") +995 (32) 2 45 04 56(9)
+                    p.envelope.mail(itemprop="email"): a(href="mailto:intertecs@caucasus.net") intertecs@caucasus.net
             .address-map
-            // Google map
-            #map
+                #map
         footer#footer
-            p &copy; Intertecs.ge &#9679; 2018
+            p.copyright &copy; Intertecs.ge &#9679; 2018
             // Top.ge counter
             div#top-ge-counter-container(data-site-id="108307")
             script(async src="//counter.top.ge/counter.js")
             // End of Top.ge counter
+        
+        script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2revqu6ZJqUnD9llOalXP8mJdH-tWx8U&callback=initMap")
+        script(src="js/script.min.js")

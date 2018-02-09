@@ -5,6 +5,7 @@ const plumber = require('gulp-plumber');
 const autoprefixer = require('gulp-autoprefixer');
 const imagemin = require('gulp-imagemin');
 const minify = require('gulp-uglify');
+const concat = require('gulp-concat');
 const browser_sync = require('browser-sync').create();
 
 // Compile PUG files
@@ -31,6 +32,15 @@ gulp.task('imagemin', () =>
         .pipe(imagemin())
         .pipe(gulp.dest('./build/img'))
 );
+
+// Minify and Concatenate JS
+gulp.task('js', function() {
+    return gulp.src('./source/js/*.js')
+        .pipe(concat('script.min.js'))
+        .pipe(minify())
+        .pipe(gulp.dest('./build/js/'))
+        .pipe(browser_sync.stream());
+});
 
 // Watch and Serve
 gulp.task('watch', function() {

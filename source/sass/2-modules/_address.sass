@@ -2,8 +2,10 @@
   display: grid
   grid-template-columns: 1fr 1fr
   padding: 0 2em
+  margin-bottom: 4em
 
   .c-title
+    margin-top: 0px
     &.ka
       font-family: $font-geo
 
@@ -12,6 +14,34 @@
     margin-bottom: .4em
     &.ka
       font-family: $font-geo
+    &.mail
+      font-family: $font-eng
+      a
+        color: $primary-text
+    &.map-marker:before
+      content: '\f041'
+      font-family: FontAwesome
+      color: $dark-primary
+      margin-right: 12px
+      font-size: 1.6rem
+    &.phone:before
+      content: '\f095'
+      font-family: FontAwesome
+      color: $dark-primary
+      margin-right: 5px
+      font-size: 1.6rem
+    &.fax:before
+      content: "\f1ac"
+      font-family: FontAwesome
+      color: $dark-primary
+      margin-right: 5px
+      font-size: 1.4rem
+    &.envelope:before
+      content: "\f0e0"
+      font-family: FontAwesome
+      color: $dark-primary
+      margin-right: 5px
+      font-size: 1.4rem
 
   i.fa
     font-size: 1.8rem

@@ -479,7 +479,7 @@ a {
     letter-spacing: 2px; }
 
 #main {
-  margin-bottom: 3em; }
+  margin-bottom: 5em; }
 
 .main--title {
   font-family: "BPG Algeti", sans-serif;
@@ -533,7 +533,7 @@ a {
     margin: .6em 0;
     text-align: center;
     background-color: #FFEB3B;
-    color: #455A64;
+    color: #212121;
     -webkit-transition: all .2s ease-in;
     -o-transition: all .2s ease-in;
     transition: all .2s ease-in; }
@@ -544,14 +544,45 @@ a {
 .address {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 0 2em; }
-  .address .c-title.ka {
-    font-family: "BPG Algeti", sans-serif; }
+  padding: 0 2em;
+  margin-bottom: 4em; }
+  .address .c-title {
+    margin-top: 0px; }
+    .address .c-title.ka {
+      font-family: "BPG Algeti", sans-serif; }
   .address p {
     font-size: 1.1rem;
     margin-bottom: .4em; }
     .address p.ka {
       font-family: "BPG Algeti", sans-serif; }
+    .address p.mail {
+      font-family: "Open Sans", sans-serif; }
+      .address p.mail a {
+        color: #212121; }
+    .address p.map-marker:before {
+      content: '\f041';
+      font-family: FontAwesome;
+      color: #455A64;
+      margin-right: 12px;
+      font-size: 1.6rem; }
+    .address p.phone:before {
+      content: '\f095';
+      font-family: FontAwesome;
+      color: #455A64;
+      margin-right: 5px;
+      font-size: 1.6rem; }
+    .address p.fax:before {
+      content: "\f1ac";
+      font-family: FontAwesome;
+      color: #455A64;
+      margin-right: 5px;
+      font-size: 1.4rem; }
+    .address p.envelope:before {
+      content: "\f0e0";
+      font-family: FontAwesome;
+      color: #455A64;
+      margin-right: 5px;
+      font-size: 1.4rem; }
   .address i.fa {
     font-size: 1.8rem;
     margin-right: .5em;
@@ -562,3 +593,21 @@ a {
     .address .address-map #map {
       width: 100%;
       height: 100%; }
+
+#footer {
+  width: 100%;
+  background-color: #455A64;
+  padding: .6em 0;
+  position: relative;
+  border-top: 4px solid #FFEB3B; }
+  #footer .copyright {
+    text-align: center;
+    color: #FFFFFF; }
+
+#top-ge-counter-container {
+  position: absolute;
+  right: 1em;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%); }
