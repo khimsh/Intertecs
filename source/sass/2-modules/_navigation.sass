@@ -1,0 +1,31 @@
+#navigation
+    justify-self: center
+    h2 
+        +hide-from-screen
+    ul
+        display: flex
+        flex-direction: row
+    a 
+        display: block
+        padding: .6em
+        margin-right: .4em
+        font-size: 1rem
+        font-family: $font-geo
+        color: $primary-text
+        transition: all .2s ease-in-out
+        &:hover,
+        &:active
+            background-color: $primary-text
+            color: $accent
+
+/**
+ * Language links
+ *
+#header
+    .lang
+        justify-self: flex-end
+    .lang--icon
+        width: 1.5em
+        height: auto
+.lang--icon-first
+    margin-bottom: .4em

@@ -1,0 +1,36 @@
+.burger-icon
+    position: absolute
+    top: 8px
+    right: 5px
+    height: 30px
+    width: 42px
+    cursor: pointer
+    display: none
+    .bar-top,
+    .bar-middle,
+    .bar-bottom
+        position: absolute
+        height: 6px
+        width: 100%
+        background-color: $primary
+        transition: all .2s ease-in-out
+    .bar-top
+        top: 0
+    .bar-middle
+        top: 50%
+        transform: translateY(-50%)
+        opacity: 1
+    .bar-bottom
+        bottom: 0  
+    &.active
+        .bar-top
+            transform-origin: 0 0
+            transform: rotate(45deg)
+            top: 8px
+            left: 4px
+        .bar-middle
+            opacity: 0
+        .bar-bottom
+            transform-origin: 0 0
+            transform: rotate(-45deg)
+    
