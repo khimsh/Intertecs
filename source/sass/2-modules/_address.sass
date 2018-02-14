@@ -1,19 +1,22 @@
 .address
-  display: grid
-  grid-template-columns: 1fr 1fr
-  padding: 0 2em
   margin-bottom: 4em
+  .content--wrapper
+    grid-column: 1/5
+    background-color: $accent
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-column-gap: 2em
+    padding: 1em 
+
+  .address-info
+    padding: 2em 1em
 
   .c-title
     margin-top: 0px
-    &.ka
-      font-family: $font-geo
 
   p
     font-size: 1.1rem
     margin-bottom: .4em
-    &.ka
-      font-family: $font-geo
     &.mail
       font-family: $font-eng
       a
@@ -50,7 +53,8 @@
 
   .address-map
     width: 100%
-    height: 100%
+    height: 110%
+    transform: translate(2em, 2em)
     #map
       width: 100%
       height: 100%

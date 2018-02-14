@@ -3,9 +3,9 @@ mixin article(title, src, description, href, ctaText)
         figure
             img(src=src alt=title)
         //.content
-        h3= title 
-        p= description
-        a(href=href, class="btn")= ctaText
+        h3.eng= title 
+        p.ka= description
+        a(href=href, class="btn ka")= ctaText
 
 doctype html
 html
@@ -17,7 +17,7 @@ html
         link(rel="stylesheet", href="//cdn.web-fonts.ge/fonts/bpg-algeti/css/bpg-algeti.min.css")
         link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700")
         link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
-        //script(defer src="js/fontawesome/fontawesome-all.min.js")
+        
     body
         header#header
             .h--title-wrapper
@@ -30,9 +30,10 @@ html
                 h2.n--title ნავიგაცია
                 ul 
                     li: a(href="#") მთავარი
-                    li: a(href="#") პარტნიორი კომპანიები
-                    li: a(href="#") ჩვენს შესახებ
-                    li: a(href="#") კონტაქტი
+                    li: a(href="#") ჩვენ შესახებ
+                    li: a(href="#") ტექნიკა
+                    li: a(href="#").animated.pulse.shop ნაწილები
+                    li: a(href="#") კონტაქტი             
             ul.lang
                 li: a(href="#"): img(src="img/icon-geo.png", alt="", class="lang--icon lang--icon-first")
                 li: a(href="#"): img(src="img/icon-en.png", alt="", class="lang--icon")
@@ -43,36 +44,66 @@ html
         .hero-section
             // მერე <picture> თაგი ჩაამატე
             .hs-wrapper
-                h1.hs--title Intertechnics LTD
-                p.hs-lead უმაღლესი ხარისხის სამშენებლო ტექნიკა
-        main#main
-            h1.main--title პარტნიორი კომპანიები
-            .main--wrapper
-                +article('bobcat', 'img/s570.jpg', 'მინი სატვირთელები და ექსკავატორები, ტელესკოპური სატვირთელები და მათი დამხმარე მოწყობილობები.', 'https://www.bobcat.com/cis/en/index', 'სრული პროდუქცია')
-                +article('bomag', 'img/bomag.jpg', 'ასფალტისა და გრუნტის სატკეპნები, ასფალტის დამგებები, ფრეზები, რესაიკლერები და გრუნტის სტაბილიზატორები.', 'https://www.bomag.com/world/en/homepage.htm', 'სრული პროდუქცია')
-                +article('marini', 'img/marini.jpg', 'ასფალტის მობილური და სტაციონარული ქარხნები.', 'http://www.marini.fayat.com/en/', 'სრული პროდუქცია')
-                +article('powerplus', 'img/powerplus.jpg', 'ბორბლებიანი და მუხლუხა ექსკავატორები, ბორბლებიანი სატვირთელები (Loader), ბულდოზერები, მობილური და მუხლუხა ამწეები, ავტოთვითმცლელები.', 'http://www.powerplus.us/', 'სრული პროდუქცია')
-                +article('hbm-nobas', 'img/hbm.jpg', 'სხვადასხვა ტიპისა და ზომის გრეიდერები.', 'http://www.gp.ag/hbm-nobas/Start/', 'სრული პროდუქცია')
-                +article('putzmeister', 'img/putzmeister.jpg', 'ბეტონის სტაციონარული, მობილური და გვირაბის ტუმბოები, ცემენტო-ქვიშის მიწოდებისა და სალესი ტუმბოები. ბეტონის მობილური მიქსერები.', 'http://www.putzmeister.com/enu/index.htm', 'სრული პროდუქცია')
-                +article('terex-finlay', 'img/terex.jpg', '100–700 ტ/სთ წარმადობის მობილური, ყბებიანი და როტორული სამსხვრევები, მობილური სარეცხი ცხრილები და კლასიფიკატორები.', 'https://www.terex.com/mobile-processing-equipment/en/', 'სრული პროდუქცია')
-                +article('kaeser gmbh', 'img/kaeser.jpg', 'ჰაერის ინდუსტრიული დანიშნულების სტაციონარული და სამშენებლო დანიშნულების მობილური კომპრესორები.', 'http://www.kaeser.com/int-en/', 'სრული პროდუქცია')
-                +article('ins-makina', 'img/makina.jpg', 'ბეტონის სტაციონარული და მობილური კვანძები, ქვა–ღორღის სარეცხი და დამხარისხებელი მობილური დანადგარები.', 'https://www.insmakina.com/ru/', 'სრული პროდუქცია')
-        
-        section.address
-            .address-info
-                h1.c-title.ka საკონტაქტო ინფორმაცია
+                h1.hs--title.eng Intertechnics LTD
+                p.hs-lead.ka უმაღლესი ხარისხის სამშენებლო ტექნიკა
+            .hero--cta
                 div(itemscope, itemtype='http://schema.org/Organization')
                     div(itemprop="address" itemscope itemtype="http://schema.org/PostalAddress")
-                        p.ka.map-marker #[span(itemprop="streetAddress")]85 ფალიაშვილის ქ. #[span(itemprop="addressLocality")] თბილისი, საქართველო
-                        p.ka(itemprop="postalCode") ზიპ-კოდი: 0162
                         p.ka.phone(itemprop="telephone") +995 (32) 2 45 04 56
-                        p.ka.map-marker სერვის ცენტრი: #[span(itemprop="streetAddress")] კახეთის გ/ტ 106
-                    p.ka.fax(itemprop="faxNumber") +995 (32) 2 45 04 56(9)
-                    p.envelope.mail(itemprop="email"): a(href="mailto:intertecs@caucasus.net") intertecs@caucasus.net
-            .address-map
-                #map
+                        p.envelope.mail(itemprop="email"): a.eng(href="mailto:intertecs@caucasus.net") intertecs@caucasus.net
+
+        main#main
+            section.section.section-one.about-us
+                h2.section--title.ka ჩვენ შესახებ
+                .section--wrapper
+                    .content--wrapper
+                        img(src="img/s570.jpg", alt="")
+                        //p Intertechnics LTD მოღვაწეობს ქართულ საგზაო–სამშენებლო ბაზარზე 2005 წლიდან და წარმოადგენს მსოფლიოში ცნობილი ბრენდების ოფიციალურ დილერს.
+                        .about-us--content
+                            p.ka <span class="eng">Intertechnics LTD</span>-ის მთავარი მიზანია საბაზრო წილისა და კომპეტენტუნარიანობის შენარჩუნება ცვალებად ქართულ ბაზარზე.
+                            p.ka კომპანია პარტნიორობს მოწინავე საგზაო-სამშენებლო ტექნიკის მწარმოებელ ბრენდებთან 2005 წლიდან. ეს ურთიერთობები უზრუნველყოფს ინოვაციებისა და უმაღლესი ხარისხის ტექნიკის შემოდინებას ქართულ სამშენებლო სივრცეში.
+                            p.ka პარტნიორობის პირველ ეტაპს არსებულ და პოტენციურ კლიენტებთან წარმოადგენს ინფორმაციის წვდომადობა და სანდოობა მოთხოვნად პროდუქციაზე.
+                            p.ka ჩვენი ჯგუფი დაკომპლექტებულია პროფესიონალებით, რომლებიც ყოველწლიურად გადიან გადამზადებას და იღრმავებენ გამოცდილებას, უშუალოდ პარტნიორი ფირმების ეგიდით გამართულ ტრენინგებზე.
+                h2.section--title.ka ჩვენ გთავაზობთ
+                ul.offers--wrapper
+                    li.ka ხარისხთან შესაბამისი ფასები
+                    li.ka ტექნიკის სწრაფი ტრანსპორტირება 
+                    li.ka გადახდის მოქნილი პირობები
+                    li.ka ცვეთადი ნაწილები და <span class="eng">After-service</span>
+                    li.ka გარანტია
+            section.section.section-two
+                h2.section--title.ka ტექნიკა
+                .section--wrapper
+                    +article('bobcat', 'img/s570.jpg', 'მინი სატვირთელები და ექსკავატორები, ტელესკოპური სატვირთელები და მათი დამხმარე მოწყობილობები.', 'https://www.bobcat.com/cis/en/index', 'სრული პროდუქცია')
+                    +article('bomag', 'img/bomag.jpg', 'ასფალტისა და გრუნტის სატკეპნები, ასფალტის დამგებები, ფრეზები, რესაიკლერები და გრუნტის სტაბილიზატორები.', 'https://www.bomag.com/world/en/homepage.htm', 'სრული პროდუქცია')
+                    +article('marini', 'img/marini.jpg', 'ასფალტის მობილური და სტაციონარული ქარხნები.', 'http://www.marini.fayat.com/en/', 'სრული პროდუქცია')
+                    +article('powerplus', 'img/powerplus.jpg', 'ბორბლებიანი და მუხლუხა ექსკავატორები, ბორბლებიანი სატვირთელები (Loader), ბულდოზერები, მობილური და მუხლუხა ამწეები, ავტოთვითმცლელები.', 'http://www.powerplus.us/', 'სრული პროდუქცია')
+                    +article('hbm-nobas', 'img/hbm.jpg', 'სხვადასხვა ტიპისა და ზომის გრეიდერები.', 'http://www.gp.ag/hbm-nobas/Start/', 'სრული პროდუქცია')
+                    +article('putzmeister', 'img/putzmeister.jpg', 'ბეტონის სტაციონარული, მობილური და გვირაბის ტუმბოები, ცემენტო-ქვიშის მიწოდებისა და სალესი ტუმბოები. ბეტონის მობილური მიქსერები.', 'http://www.putzmeister.com/enu/index.htm', 'სრული პროდუქცია')
+                    +article('terex-finlay', 'img/terex.jpg', '100–700 ტ/სთ წარმადობის მობილური, ყბებიანი და როტორული სამსხვრევები, მობილური სარეცხი ცხრილები და კლასიფიკატორები.', 'https://www.terex.com/mobile-processing-equipment/en/', 'სრული პროდუქცია')
+                    +article('kaeser gmbh', 'img/kaeser.jpg', 'ჰაერის ინდუსტრიული დანიშნულების სტაციონარული და სამშენებლო დანიშნულების მობილური კომპრესორები.', 'http://www.kaeser.com/int-en/', 'სრული პროდუქცია')
+                    +article('ins-makina', 'img/makina.jpg', 'ბეტონის სტაციონარული და მობილური კვანძები, ქვა–ღორღის სარეცხი და დამხარისხებელი მობილური დანადგარები.', 'https://www.insmakina.com/ru/', 'სრული პროდუქცია')
+                
+            section.address
+                .section--wrapper
+                    .content--wrapper
+                        .address-info
+                            h1.c-title.ka საკონტაქტო ინფორმაცია
+                            div(itemscope, itemtype='http://schema.org/Organization')
+                                div(itemprop="address" itemscope itemtype="http://schema.org/PostalAddress")
+                                    p.ka.map-marker #[span(itemprop="streetAddress")]85 ფალიაშვილის ქ. #[span(itemprop="addressLocality")] თბილისი, საქართველო
+                                    p.ka(itemprop="postalCode") ზიპ-კოდი: 0162
+                                    p.ka.phone(itemprop="telephone") +995 (32) 2 45 04 56
+                                    p.ka.map-marker სერვის ცენტრი: #[span(itemprop="streetAddress")] კახეთის გ/ტ 106
+                                p.ka.fax(itemprop="faxNumber") +995 (32) 2 45 04 56(9)
+                                p.envelope.mail(itemprop="email"): a.eng(href="mailto:intertecs@caucasus.net") intertecs@caucasus.net
+                        .address-map
+                            #map
+
+        section.section.section-three
+                h2.section--title.ka ნაწილები
         footer#footer
-            p.copyright &copy; Intertecs.ge &#9679; 2018
+            p.copyright.eng &copy; Intertecs.ge &#9679; 2018
             // Top.ge counter
             div#top-ge-counter-container(data-site-id="108307")
             script(async src="//counter.top.ge/counter.js")

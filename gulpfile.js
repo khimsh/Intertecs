@@ -50,6 +50,7 @@ gulp.task('watch', function() {
       });
 
         gulp.watch("./source/sass/**/*.sass", ['sass']);
+        gulp.watch("./source/js/**/*.js", ['js']);
         gulp.watch("./source/**/*.pug", ['pug'])
         gulp.watch("./source/img/*", ['imagemin']);
         gulp.watch("./build/*.html").on('change', browser_sync.reload);

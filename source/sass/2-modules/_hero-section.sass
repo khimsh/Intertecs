@@ -1,6 +1,7 @@
 .hero-section
   height: 80vh
   width: 100%
+  position: relative
   background-image: url('../img/hero-img.jpg')
   background-size: cover
   background-position: center
@@ -16,7 +17,6 @@
     padding: 2em 2.4em
   .hs--title
     font-size: 3rem
-    font-family: $font-eng
     font-weight: 400
     text-transform: uppercase
     letter-spacing: 2px
@@ -24,5 +24,12 @@
     padding-bottom: .6em
   .hs-lead
     font-size: 1.4rem
-    font-family: $font-geo
-    letter-spacing: 2px
+    letter-spacing: 3px
+  .hero--cta
+    position: absolute
+    left: 50%
+    bottom: 10px
+    transform: translateX(-50%)
+    a
+      font-size: 1.1rem
+      color: $text
