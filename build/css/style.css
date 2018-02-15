@@ -455,7 +455,7 @@ a {
   height: 80vh;
   width: 100%;
   position: relative;
-  background-image: url("../img/hero-img.jpg");
+  background-image: url("../img/hero-image.jpg");
   background-size: cover;
   background-position: center;
   border-bottom: 8px solid #FFEB3B;
@@ -471,42 +471,44 @@ a {
   margin-bottom: 3em; }
   .hero-section .hs-wrapper {
     border: 5px solid #FFFFFF;
-    padding: 2em 2.4em; }
-  .hero-section .hs--title {
-    font-size: 3rem;
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin: 0;
-    padding-bottom: .6em; }
-  .hero-section .hs-lead {
-    font-size: 1.4rem;
-    letter-spacing: 3px; }
+    padding: 2em 2.4em;
+    background-color: rgba(0, 0, 0, 0.3); }
+    .hero-section .hs-wrapper .hs--title {
+      font-size: 3rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin: 0;
+      padding-bottom: .6em; }
+    .hero-section .hs-wrapper .hs-lead {
+      font-size: 1.4rem;
+      letter-spacing: 3px; }
   .hero-section .hero--cta {
     position: absolute;
     left: 0px;
     top: 1em;
     text-align: left;
-    font-size: 1.2rem;
-    background-color: #FFEB3B;
+    font-size: 1.1rem;
     padding: .7em .7em .7em 1.4em;
-    color: #455A64;
-    -webkit-box-shadow: 4px 4px 10px black;
-            box-shadow: 4px 4px 10px black; }
-    .hero-section .hero--cta a {
-      color: #455A64; }
+    color: #FFFFFF; }
+    .hero-section .hero--cta a:link,
+    .hero-section .hero--cta a:visited {
+      color: #FFFFFF; }
+      .hero-section .hero--cta a:link:hover,
+      .hero-section .hero--cta a:visited:hover {
+        color: #b3b3b3; }
     .hero-section .hero--cta .phone:before {
       content: '\f095';
       font-family: FontAwesome;
-      color: #455A64;
-      margin-right: 5px;
-      font-size: 1.6rem; }
+      color: #FFFFFF;
+      margin-right: 10px;
+      font-size: 1.4rem; }
     .hero-section .hero--cta .envelope:before {
       content: "\f0e0";
       font-family: FontAwesome;
-      color: #455A64;
-      margin-right: 5px;
-      font-size: 1.4rem; }
+      color: #FFFFFF;
+      margin-right: 10px;
+      font-size: 1.2rem; }
 
 #main {
   margin-bottom: 5em; }
@@ -521,8 +523,8 @@ a {
   margin-bottom: 2em; }
 
 .section--wrapper {
-  width: 100%;
-  padding: 0 2em;
+  width: 90vw;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, minmax(200px, 1fr));
   grid-column-gap: 1.6em;
@@ -581,13 +583,13 @@ a {
     background-position: center;
     background-size: cover; }
     .about-us .offers--wrapper li:first-child {
-      background-image: url("https://thxuk.com/app/uploads/2017/03/E-25-Digger-Image.jpg"); }
+      background-image: url("../img/deal.jpeg"); }
     .about-us .offers--wrapper li:nth-child(2) {
-      background-image: url("https://www.bomag.com/united_kingdom/media/image/content/BMF-2500_141.jpg"); }
+      background-image: url("../img/transport.jpg"); }
     .about-us .offers--wrapper li:nth-child(3) {
-      background-image: url("http://www.kaeser.com/int-en/Media/C-M_500_Anwendung_001_17-10591.jpg"); }
+      background-image: url("../img/payment.jpeg"); }
     .about-us .offers--wrapper li:nth-child(4) {
-      background-image: url("http://insmakina.ru/admin/system/image.php/ins_makina_concrete_batching_plants__7_.JPG?width=800&height=800&image=ins_makina_concrete_batching_plants__7_.JPG"); }
+      background-image: url("../img/parts.jpeg"); }
     .about-us .offers--wrapper li:nth-child(5) {
       background-image: url("http://papenburg-russia.ru/wp-content/uploads/2012/10/BG-160-T-4-TA-4.jpg"); }
 
@@ -641,10 +643,9 @@ a {
 
 .address {
   margin-bottom: 4em; }
-
-.section--wrapper {
-  width: 80vw;
-  margin: 0 auto; }
+  .address .section--wrapper {
+    width: 80vw;
+    margin: 0 auto; }
 
 .content--wrapper {
   grid-column: 1/5;
@@ -710,7 +711,7 @@ a {
           transform: translate(-3em, -3em); }
   .shop .address-map #mapShop {
     width: 100%;
-    height: 100%; }
+    height: 120%; }
 
 #footer {
   width: 100%;

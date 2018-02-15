@@ -2,7 +2,7 @@
   height: 80vh
   width: 100%
   position: relative
-  background-image: url('../img/hero-img.jpg')
+  background-image: url('../img/hero-image.jpg')
   background-size: cover
   background-position: center
   border-bottom: 8px solid $accent
@@ -12,41 +12,48 @@
   align-items: center
   justify-content: center
   margin-bottom: 3em
+
   .hs-wrapper
     border: 5px solid $text
     padding: 2em 2.4em
-  .hs--title
-    font-size: 3rem
-    font-weight: 400
-    text-transform: uppercase
-    letter-spacing: 2px
-    margin: 0
-    padding-bottom: .6em
-  .hs-lead
-    font-size: 1.4rem
-    letter-spacing: 3px
+    background-color: rgba(0,0,0,.3)
+
+    .hs--title
+      font-size: 3rem
+      font-weight: 400
+      text-transform: uppercase
+      letter-spacing: 2px
+      margin: 0
+      padding-bottom: .6em
+
+    .hs-lead
+      font-size: 1.4rem
+      letter-spacing: 3px
+
   .hero--cta
     position: absolute
     left: 0px
     top: 1em
-    //transform: translateX(-50%)
     text-align: left
-    font-size: 1.2rem
-    background-color: $accent
+    font-size: 1.1rem
     padding: .7em .7em .7em 1.4em
-    color: $dark-primary
-    box-shadow: 4px 4px 10px rgba(0,0,0,1)
-    a
-      color: $dark-primary
+    color: $text
+
+    a:link,
+    a:visited
+      color: $text
+      &:hover
+        color: shade($text, 30%)
+        
     .phone:before
       content: '\f095'
       font-family: FontAwesome
-      color: $dark-primary
-      margin-right: 5px
-      font-size: 1.6rem
+      color: $text
+      margin-right: 10px
+      font-size: 1.4rem
     .envelope:before
       content: "\f0e0"
       font-family: FontAwesome
-      color: $dark-primary
-      margin-right: 5px
-      font-size: 1.4rem
+      color: $text
+      margin-right: 10px
+      font-size: 1.2rem

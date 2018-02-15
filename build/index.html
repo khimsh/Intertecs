@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ka">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,21 +15,21 @@
         <div class="h--cta-wrapper">
           <p>გაქვთ კითხვები?</p><a href="tel:+995 599 50 25 17">+995 599 50 25 17</a>
         </div>
-        <h1>Intertechnics</h1><a href="#"><img class="h--logo" src="img/intertecs-logo.svg"></a>
+        <h1>Intertechnics</h1><a href="#"><img class="h--logo" src="img/logo.png" alt="Intertechnics Logo"></a>
       </div>
       <nav id="navigation">
         <h2 class="n--title">ნავიგაცია</h2>
         <ul> 
           <li><a href="#">მთავარი</a></li>
-          <li><a href="#">ჩვენ შესახებ</a></li>
-          <li><a href="#">ტექნიკა</a></li>
-          <li><a class="animated pulse shop" href="#">ნაწილები</a></li>
-          <li><a href="#">კონტაქტი             </a></li>
+          <li><a href="#about">ჩვენ შესახებ</a></li>
+          <li><a href="#equipment">ტექნიკა</a></li>
+          <li><a class="animated pulse shop" href="#parts">ნაწილები</a></li>
+          <li><a href="#contact">კონტაქტი             </a></li>
         </ul>
       </nav>
       <ul class="lang">
-        <li><a href="#"><img class="lang--icon lang--icon-first" src="img/icon-geo.png" alt=""></a></li>
-        <li><a href="#"><img class="lang--icon" src="img/icon-en.png" alt=""></a></li>
+        <li><a href="/"><img class="lang--icon lang--icon-first" src="img/icon-geo.png" alt="flag of Georgia"></a></li>
+        <li><a href="#"><img class="lang--icon" src="img/icon-en.png" alt="flag of England"></a></li>
       </ul>
     </header>
     <div class="burger-icon">
@@ -38,7 +38,6 @@
       <div class="bar-bottom"></div>
     </div>
     <div class="hero-section">
-      <!-- მერე <picture> თაგი ჩაამატე-->
       <div class="hs-wrapper">
         <h1 class="hs--title eng">Intertechnics LTD</h1>
         <p class="hs-lead ka">უმაღლესი ხარისხის სამშენებლო ტექნიკა</p>
@@ -53,11 +52,10 @@
       </div>
     </div>
     <main id="main">
-      <section class="section section-one about-us">
+      <section class="section section-one about-us" id="about">
         <h2 class="section--title ka">ჩვენ შესახებ</h2>
         <div class="section--wrapper">
           <div class="content--wrapper"><img src="img/s570.jpg" alt="">
-            <!--p Intertechnics LTD მოღვაწეობს ქართულ საგზაო–სამშენებლო ბაზარზე 2005 წლიდან და წარმოადგენს მსოფლიოში ცნობილი ბრენდების ოფიციალურ დილერს.-->
             <div class="about-us--content">
               <p class="ka"><span class="eng">Intertechnics LTD</span>-ის მთავარი მიზანია საბაზრო წილისა და კომპეტენტუნარიანობის შენარჩუნება ცვალებად ქართულ ბაზარზე.</p>
               <p class="ka">კომპანია პარტნიორობს მოწინავე საგზაო-სამშენებლო ტექნიკის მწარმოებელ ბრენდებთან 2005 წლიდან. ეს ურთიერთობები უზრუნველყოფს ინოვაციებისა და უმაღლესი ხარისხის ტექნიკის შემოდინებას ქართულ სამშენებლო სივრცეში.</p>
@@ -71,11 +69,11 @@
           <li class="ka">ხარისხთან შესაბამისი ფასები</li>
           <li class="ka">ტექნიკის სწრაფი ტრანსპორტირება </li>
           <li class="ka">გადახდის მოქნილი პირობები</li>
-          <li class="ka">ცვეთადი ნაწილები და <span class="eng">After-service</span></li>
+          <li class="ka">ცვეთადი ნაწილები და <span class="en">After-service</span></li>
           <li class="ka">გარანტია</li>
         </ul>
       </section>
-      <section class="section section-two">
+      <section class="section section-two equipment" id="equipment">
         <h2 class="section--title ka">ტექნიკა</h2>
         <div class="section--wrapper">
           <article class="bobcat article">
@@ -134,7 +132,7 @@
           </article>
         </div>
       </section>
-      <section class="address">
+      <section class="section section-three address" id="contact">
         <div class="section--wrapper">
           <div class="content--wrapper">
             <div class="address-info">
@@ -150,24 +148,26 @@
                 <p class="envelope mail" itemprop="email"><a class="en" href="mailto:intertecs@caucasus.net">intertecs@caucasus.net</a></p>
               </div>
             </div>
+            <!-- Google map for Intertechnics Office-->
             <div class="address-map">
               <div id="map"></div>
             </div>
           </div>
         </div>
       </section>
-    </main>
-    <section class="section section-three shop">
-      <h2 class="section--title ka">ნაწილები</h2>
-      <div class="section--wrapper">
-        <div class="content--wrapper">
-          <div class="address-map">
-            <div id="mapShop"></div>
+      <section class="section section-four shop" id="parts">
+        <h2 class="section--title ka">ნაწილები</h2>
+        <div class="section--wrapper">
+          <div class="content--wrapper">
+            <!-- Google map for parts shop-->
+            <div class="address-map">
+              <div id="mapShop"></div>
+            </div>
+            <p class="ka">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi pariatur iste soluta facere blanditiis expedita cumque laborum reprehenderit animi similique! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, voluptas.</p>
           </div>
-          <p class="ka">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi pariatur iste soluta facere blanditiis expedita cumque laborum reprehenderit animi similique! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, voluptas.</p>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
     <footer id="footer">
       <p class="copyright eng">&copy; Intertecs.ge &#9679; 2018</p>
       <!-- Top.ge counter-->

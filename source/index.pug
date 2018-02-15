@@ -8,7 +8,7 @@ mixin article(title, src, description, href, ctaText)
         a(href=href, class="btn ka")= ctaText
 
 doctype html
-html
+html(lang="ka")
     head
         meta(charset="utf-8")
         meta(name="viewport", content="width=device-width, initial-scale=1")
@@ -25,24 +25,25 @@ html
                     p გაქვთ კითხვები?
                     a(href="tel:+995 599 50 25 17") +995 599 50 25 17
                 h1 Intertechnics
-                a(href="#"): img.h--logo(src="img/intertecs-logo.svg")   
+                a(href="#"): img.h--logo(src="img/logo.png", alt="Intertechnics Logo")   
             nav#navigation
                 h2.n--title ნავიგაცია
                 ul 
                     li: a(href="#") მთავარი
-                    li: a(href="#") ჩვენ შესახებ
-                    li: a(href="#") ტექნიკა
-                    li: a(href="#").animated.pulse.shop ნაწილები
-                    li: a(href="#") კონტაქტი             
+                    li: a(href="#about") ჩვენ შესახებ
+                    li: a(href="#equipment") ტექნიკა
+                    li: a(href="#parts").animated.pulse.shop ნაწილები
+                    li: a(href="#contact") კონტაქტი             
             ul.lang
-                li: a(href="#"): img(src="img/icon-geo.png", alt="", class="lang--icon lang--icon-first")
-                li: a(href="#"): img(src="img/icon-en.png", alt="", class="lang--icon")
+                li: a(href="/"): img(src="img/icon-geo.png", alt="flag of Georgia", class="lang--icon lang--icon-first")
+                li: a(href="#"): img(src="img/icon-en.png", alt="flag of England", class="lang--icon")
+
         .burger-icon
             .bar-top 
             .bar-middle
             .bar-bottom
+
         .hero-section
-            // მერე <picture> თაგი ჩაამატე
             .hs-wrapper
                 h1.hs--title.eng Intertechnics LTD
                 p.hs-lead.ka უმაღლესი ხარისხის სამშენებლო ტექნიკა
@@ -53,12 +54,11 @@ html
                         p.envelope.mail(itemprop="email"): a.en(href="mailto:intertecs@caucasus.net") intertecs@caucasus.net
 
         main#main
-            section.section.section-one.about-us
+            section.section.section-one.about-us#about
                 h2.section--title.ka ჩვენ შესახებ
                 .section--wrapper
                     .content--wrapper
                         img(src="img/s570.jpg", alt="")
-                        //p Intertechnics LTD მოღვაწეობს ქართულ საგზაო–სამშენებლო ბაზარზე 2005 წლიდან და წარმოადგენს მსოფლიოში ცნობილი ბრენდების ოფიციალურ დილერს.
                         .about-us--content
                             p.ka <span class="eng">Intertechnics LTD</span>-ის მთავარი მიზანია საბაზრო წილისა და კომპეტენტუნარიანობის შენარჩუნება ცვალებად ქართულ ბაზარზე.
                             p.ka კომპანია პარტნიორობს მოწინავე საგზაო-სამშენებლო ტექნიკის მწარმოებელ ბრენდებთან 2005 წლიდან. ეს ურთიერთობები უზრუნველყოფს ინოვაციებისა და უმაღლესი ხარისხის ტექნიკის შემოდინებას ქართულ სამშენებლო სივრცეში.
@@ -69,9 +69,10 @@ html
                     li.ka ხარისხთან შესაბამისი ფასები
                     li.ka ტექნიკის სწრაფი ტრანსპორტირება 
                     li.ka გადახდის მოქნილი პირობები
-                    li.ka ცვეთადი ნაწილები და <span class="eng">After-service</span>
+                    li.ka ცვეთადი ნაწილები და <span class="en">After-service</span>
                     li.ka გარანტია
-            section.section.section-two
+
+            section.section.section-two.equipment#equipment
                 h2.section--title.ka ტექნიკა
                 .section--wrapper
                     +article('bobcat', 'img/s570.jpg', 'მინი სატვირთელები და ექსკავატორები, ტელესკოპური სატვირთელები და მათი დამხმარე მოწყობილობები.', 'https://www.bobcat.com/cis/en/index', 'სრული პროდუქცია')
@@ -84,7 +85,7 @@ html
                     +article('kaeser gmbh', 'img/kaeser.jpg', 'ჰაერის ინდუსტრიული დანიშნულების სტაციონარული და სამშენებლო დანიშნულების მობილური კომპრესორები.', 'http://www.kaeser.com/int-en/', 'სრული პროდუქცია')
                     +article('ins-makina', 'img/makina.jpg', 'ბეტონის სტაციონარული და მობილური კვანძები, ქვა–ღორღის სარეცხი და დამხარისხებელი მობილური დანადგარები.', 'https://www.insmakina.com/ru/', 'სრული პროდუქცია')
                 
-            section.address
+            section.section.section-three.address#contact
                 .section--wrapper
                     .content--wrapper
                         .address-info
@@ -97,13 +98,15 @@ html
                                     p.ka.map-marker სერვის ცენტრი: #[span(itemprop="streetAddress")] კახეთის გ/ტ 106
                                 p.ka.fax(itemprop="faxNumber") +995 (32) 2 45 04 56(9)
                                 p.envelope.mail(itemprop="email"): a.en(href="mailto:intertecs@caucasus.net") intertecs@caucasus.net
+                        // Google map for Intertechnics Office
                         .address-map
                             #map
 
-        section.section.section-three.shop
+            section.section.section-four.shop#parts
                 h2.section--title.ka ნაწილები
                 .section--wrapper
                     .content--wrapper
+                        // Google map for parts shop
                         .address-map
                             #mapShop
                         p.ka Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi pariatur iste soluta facere blanditiis expedita cumque laborum reprehenderit animi similique! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, voluptas.
