@@ -27,9 +27,26 @@
     letter-spacing: 3px
   .hero--cta
     position: absolute
-    left: 50%
-    bottom: 10px
-    transform: translateX(-50%)
+    left: 0px
+    top: 1em
+    //transform: translateX(-50%)
+    text-align: left
+    font-size: 1.2rem
+    background-color: $accent
+    padding: .7em .7em .7em 1.4em
+    color: $dark-primary
+    box-shadow: 4px 4px 10px rgba(0,0,0,1)
     a
-      font-size: 1.1rem
-      color: $text
+      color: $dark-primary
+    .phone:before
+      content: '\f095'
+      font-family: FontAwesome
+      color: $dark-primary
+      margin-right: 5px
+      font-size: 1.6rem
+    .envelope:before
+      content: "\f0e0"
+      font-family: FontAwesome
+      color: $dark-primary
+      margin-right: 5px
+      font-size: 1.4rem

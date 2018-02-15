@@ -3,7 +3,7 @@ mixin article(title, src, description, href, ctaText)
         figure
             img(src=src alt=title)
         //.content
-        h3.eng= title 
+        h3.en= title 
         p.ka= description
         a(href=href, class="btn ka")= ctaText
 
@@ -49,8 +49,8 @@ html
             .hero--cta
                 div(itemscope, itemtype='http://schema.org/Organization')
                     div(itemprop="address" itemscope itemtype="http://schema.org/PostalAddress")
-                        p.ka.phone(itemprop="telephone") +995 (32) 2 45 04 56
-                        p.envelope.mail(itemprop="email"): a.eng(href="mailto:intertecs@caucasus.net") intertecs@caucasus.net
+                        p.en.phone(itemprop="telephone") +995 (32) 2 45 04 56
+                        p.envelope.mail(itemprop="email"): a.en(href="mailto:intertecs@caucasus.net") intertecs@caucasus.net
 
         main#main
             section.section.section-one.about-us
@@ -93,15 +93,21 @@ html
                                 div(itemprop="address" itemscope itemtype="http://schema.org/PostalAddress")
                                     p.ka.map-marker #[span(itemprop="streetAddress")]85 ფალიაშვილის ქ. #[span(itemprop="addressLocality")] თბილისი, საქართველო
                                     p.ka(itemprop="postalCode") ზიპ-კოდი: 0162
-                                    p.ka.phone(itemprop="telephone") +995 (32) 2 45 04 56
+                                    p.en.phone(itemprop="telephone") +995 (32) 2 45 04 56
                                     p.ka.map-marker სერვის ცენტრი: #[span(itemprop="streetAddress")] კახეთის გ/ტ 106
                                 p.ka.fax(itemprop="faxNumber") +995 (32) 2 45 04 56(9)
-                                p.envelope.mail(itemprop="email"): a.eng(href="mailto:intertecs@caucasus.net") intertecs@caucasus.net
+                                p.envelope.mail(itemprop="email"): a.en(href="mailto:intertecs@caucasus.net") intertecs@caucasus.net
                         .address-map
                             #map
 
-        section.section.section-three
+        section.section.section-three.shop
                 h2.section--title.ka ნაწილები
+                .section--wrapper
+                    .content--wrapper
+                        .address-map
+                            #mapShop
+                        p.ka Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi pariatur iste soluta facere blanditiis expedita cumque laborum reprehenderit animi similique! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, voluptas.
+                        
         footer#footer
             p.copyright.eng &copy; Intertecs.ge &#9679; 2018
             // Top.ge counter
