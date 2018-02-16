@@ -1,8 +1,11 @@
+/**
+  * Section Layout Styles
+  *
+  */
 .section
   margin-bottom: 4em
 
 .section--title
-  font-family: $font-geo
   font-size: 2rem
   text-align: center
   margin-bottom: 2em
@@ -16,9 +19,8 @@
   grid-row-gap: 1.4em
   margin-bottom: 4em
 
-.section-one .section--wrapper 
-  p
-    grid-column: 1/5
-    text-align: justify
-    &.ka
-      font-family: $font-geo
+.content--wrapper
+  grid-column: 1/5
+  display: grid
+  grid-template-columns: 1fr 1fr
+  grid-column-gap: 2em

@@ -1,3 +1,7 @@
+/**
+  * Hero Section Styles
+  *
+  */
 .hero-section
   height: 80vh
   width: 100%
@@ -42,18 +46,17 @@
     a:link,
     a:visited
       color: $text
+      transition: all .2s linear
       &:hover
         color: shade($text, 30%)
         
-    .phone:before
-      content: '\f095'
+    .phone:before,
+    .envelope:before
       font-family: FontAwesome
       color: $text
       margin-right: 10px
       font-size: 1.4rem
+    .phone:before
+      content: '\f095'
     .envelope:before
       content: "\f0e0"
-      font-family: FontAwesome
-      color: $text
-      margin-right: 10px
-      font-size: 1.2rem

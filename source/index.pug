@@ -3,9 +3,9 @@ mixin article(title, src, description, href, ctaText)
         figure
             img(src=src alt=title)
         //.content
-        h3.en= title 
-        p.ka= description
-        a(href=href, class="btn ka")= ctaText
+        h3.en.article--title= title 
+        p.ka.article--content= description
+        a(href=href, class="btn ka article--cta")= ctaText
 
 doctype html
 html(lang="ka")
@@ -29,11 +29,11 @@ html(lang="ka")
             nav#navigation
                 h2.n--title ნავიგაცია
                 ul 
-                    li: a(href="#") მთავარი
-                    li: a(href="#about") ჩვენ შესახებ
-                    li: a(href="#equipment") ტექნიკა
-                    li: a(href="#parts").animated.pulse.shop ნაწილები
-                    li: a(href="#contact") კონტაქტი             
+                    li: a(href="#" class="link scroll") მთავარი
+                    li: a(href="#about" class="link scroll") ჩვენ შესახებ
+                    li: a(href="#equipment" class="link scroll") ტექნიკა
+                    li: a(href="#parts" class="link scroll").animated.pulse ნაწილები
+                    li: a(href="#contact" class="link scroll") კონტაქტი             
             ul.lang
                 li: a(href="/"): img(src="img/icon-geo.png", alt="flag of Georgia", class="lang--icon lang--icon-first")
                 li: a(href="#"): img(src="img/icon-en.png", alt="flag of England", class="lang--icon")

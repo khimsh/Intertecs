@@ -1,15 +1,14 @@
+/**
+  * Address Info Styles
+  *
+  */
 .address
   margin-bottom: 4em
   .section--wrapper
     width: 80vw
-    margin: 0 auto
     
 .content--wrapper
-  grid-column: 1/5
   background-color: $accent
-  display: grid
-  grid-template-columns: 1fr 1fr
-  grid-column-gap: 2em
   padding: 1em 
 
   .address-info
@@ -22,38 +21,26 @@
     font-size: 1.1rem
     margin-bottom: .4em
     &.mail
-      font-family: $font-eng
       a
         color: $primary-text
-    &.map-marker:before
-      content: '\f041'
+    &.map-marker:before,
+    &.phone:before,
+    &.fax:before,
+    &.envelope:before
       font-family: FontAwesome
-      color: $dark-primary
+      color: #000
       margin-right: 12px
       font-size: 1.6rem
+    &.map-marker:before
+      content: '\f041'
     &.phone:before
       content: '\f095'
-      font-family: FontAwesome
-      color: $dark-primary
-      margin-right: 5px
-      font-size: 1.6rem
     &.fax:before
       content: "\f1ac"
-      font-family: FontAwesome
-      color: $dark-primary
-      margin-right: 5px
-      font-size: 1.4rem
+      font-size: 1.3rem
     &.envelope:before
       content: "\f0e0"
-      font-family: FontAwesome
-      color: $dark-primary
-      margin-right: 5px
-      font-size: 1.4rem
-
-  i.fa
-    font-size: 1.8rem
-    margin-right: .5em
-    color: $dark-primary
+      font-size: 1.3rem
 
   .address-map
     width: 100%

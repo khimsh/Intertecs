@@ -355,7 +355,7 @@ a {
     clip: rect(1px 1px 1px 1px);
     clip: rect(1px, 1px, 1px, 1px); }
   #header img {
-    height: 36px;
+    height: 2.2em;
     width: auto; }
 
 .h--cta-wrapper {
@@ -363,6 +363,9 @@ a {
   clip: rect(1px 1px 1px 1px);
   clip: rect(1px, 1px, 1px, 1px); }
 
+/**
+ * Navigation
+ * */
 #navigation {
   justify-self: center; }
   #navigation h2 {
@@ -391,6 +394,9 @@ a {
       background-color: #212121;
       color: #FFEB3B; }
 
+/**
+ * Navigation Media Queries
+ * */
 /**
  * Language links
  * */
@@ -451,6 +457,10 @@ a {
         -ms-transform: rotate(-45deg);
             transform: rotate(-45deg); }
 
+/**
+  * Hero Section Styles
+  *
+  */
 .hero-section {
   height: 80vh;
   width: 100%;
@@ -493,56 +503,25 @@ a {
     color: #FFFFFF; }
     .hero-section .hero--cta a:link,
     .hero-section .hero--cta a:visited {
-      color: #FFFFFF; }
+      color: #FFFFFF;
+      -webkit-transition: all .2s linear;
+      -o-transition: all .2s linear;
+      transition: all .2s linear; }
       .hero-section .hero--cta a:link:hover,
       .hero-section .hero--cta a:visited:hover {
         color: #b3b3b3; }
-    .hero-section .hero--cta .phone:before {
-      content: '\f095';
+    .hero-section .hero--cta .phone:before,
+    .hero-section .hero--cta .envelope:before {
       font-family: FontAwesome;
       color: #FFFFFF;
       margin-right: 10px;
       font-size: 1.4rem; }
+    .hero-section .hero--cta .phone:before {
+      content: '\f095'; }
     .hero-section .hero--cta .envelope:before {
-      content: "\f0e0";
-      font-family: FontAwesome;
-      color: #FFFFFF;
-      margin-right: 10px;
-      font-size: 1.2rem; }
-
-#main {
-  margin-bottom: 5em; }
-
-.section {
-  margin-bottom: 4em; }
-
-.section--title {
-  font-family: "BPG Algeti", sans-serif;
-  font-size: 2rem;
-  text-align: center;
-  margin-bottom: 2em; }
-
-.section--wrapper {
-  width: 90vw;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(200px, 1fr));
-  grid-column-gap: 1.6em;
-  grid-row-gap: 1.4em;
-  margin-bottom: 4em; }
-
-.section-one .section--wrapper p {
-  grid-column: 1/5;
-  text-align: justify; }
-  .section-one .section--wrapper p.ka {
-    font-family: "BPG Algeti", sans-serif; }
+      content: "\f0e0"; }
 
 .about-us .content--wrapper {
-  grid-column: 1/5;
-  background-color: #FFEB3B;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-column-gap: 2em;
   padding: 1em; }
   .about-us .content--wrapper img {
     grid-column: 1/2;
@@ -593,6 +572,10 @@ a {
     .about-us .offers--wrapper li:nth-child(5) {
       background-image: url("http://papenburg-russia.ru/wp-content/uploads/2012/10/BG-160-T-4-TA-4.jpg"); }
 
+/**
+  * Article Styles
+  *
+  */
 .article {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -606,24 +589,18 @@ a {
           justify-content: space-between;
   padding: .5em;
   border-bottom: 4px solid #FFEB3B;
-  -webkit-transition: all .2s ease-in;
-  -o-transition: all .2s ease-in;
-  transition: all .2s ease-in;
   -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7);
           box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7); }
   .article figure {
     height: 200px;
     overflow: hidden; }
-    .article figure img {
-      -o-object-fit: contain;
-         object-fit: contain; }
-  .article h3 {
+  .article .article--title {
+    font-size: 2.1rem;
     color: #455A64;
     text-transform: capitalize;
     text-align: center;
-    font-size: 2.1rem;
     margin: .6em 0; }
-  .article p {
+  .article .article--content {
     padding: .5em;
     line-height: 1.4; }
   .article a.btn:link,
@@ -641,18 +618,17 @@ a {
     -webkit-box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.6);
             box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.6); }
 
+/**
+  * Address Info Styles
+  *
+  */
 .address {
   margin-bottom: 4em; }
   .address .section--wrapper {
-    width: 80vw;
-    margin: 0 auto; }
+    width: 80vw; }
 
 .content--wrapper {
-  grid-column: 1/5;
   background-color: #FFEB3B;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-column-gap: 2em;
   padding: 1em; }
   .content--wrapper .address-info {
     padding: 2em 1em; }
@@ -661,38 +637,23 @@ a {
   .content--wrapper p {
     font-size: 1.1rem;
     margin-bottom: .4em; }
-    .content--wrapper p.mail {
-      font-family: "Open Sans", sans-serif; }
-      .content--wrapper p.mail a {
-        color: #212121; }
-    .content--wrapper p.map-marker:before {
-      content: '\f041';
+    .content--wrapper p.mail a {
+      color: #212121; }
+    .content--wrapper p.map-marker:before, .content--wrapper p.phone:before, .content--wrapper p.fax:before, .content--wrapper p.envelope:before {
       font-family: FontAwesome;
-      color: #455A64;
+      color: #000;
       margin-right: 12px;
       font-size: 1.6rem; }
+    .content--wrapper p.map-marker:before {
+      content: '\f041'; }
     .content--wrapper p.phone:before {
-      content: '\f095';
-      font-family: FontAwesome;
-      color: #455A64;
-      margin-right: 5px;
-      font-size: 1.6rem; }
+      content: '\f095'; }
     .content--wrapper p.fax:before {
       content: "\f1ac";
-      font-family: FontAwesome;
-      color: #455A64;
-      margin-right: 5px;
-      font-size: 1.4rem; }
+      font-size: 1.3rem; }
     .content--wrapper p.envelope:before {
       content: "\f0e0";
-      font-family: FontAwesome;
-      color: #455A64;
-      margin-right: 5px;
-      font-size: 1.4rem; }
-  .content--wrapper i.fa {
-    font-size: 1.8rem;
-    margin-right: .5em;
-    color: #455A64; }
+      font-size: 1.3rem; }
   .content--wrapper .address-map {
     width: 100%;
     height: 110%;
@@ -703,15 +664,21 @@ a {
       width: 100%;
       height: 100%; }
 
-.shop .address-map {
-  width: 100%;
-  height: 200%;
-  -webkit-transform: translate(-3em, -3em);
-      -ms-transform: translate(-3em, -3em);
-          transform: translate(-3em, -3em); }
-  .shop .address-map #mapShop {
+.shop {
+  margin-top: 6em; }
+  .shop .content--wrapper {
+    width: 80vw;
+    height: 400px;
+    margin: 0 auto; }
+  .shop .address-map {
     width: 100%;
-    height: 120%; }
+    height: 100%;
+    -webkit-transform: translate(-2em, -2em);
+        -ms-transform: translate(-2em, -2em);
+            transform: translate(-2em, -2em); }
+    .shop .address-map #mapShop {
+      width: 100%;
+      height: 100%; }
 
 #footer {
   width: 100%;
@@ -731,3 +698,30 @@ a {
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%); }
+
+/**
+  * Section Layout Styles
+  *
+  */
+.section {
+  margin-bottom: 4em; }
+
+.section--title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2em; }
+
+.section--wrapper {
+  width: 90vw;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+  grid-column-gap: 1.6em;
+  grid-row-gap: 1.4em;
+  margin-bottom: 4em; }
+
+.content--wrapper {
+  grid-column: 1/5;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 2em; }
