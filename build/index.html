@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
-    <header id="header">
+    <header class="header" id="header">
       <div class="h--title-wrapper">
         <div class="h--cta-wrapper">
           <p>გაქვთ კითხვები?</p><a href="tel:+995 599 50 25 17">+995 599 50 25 17</a>
@@ -24,7 +24,7 @@
           <li><a class="link scroll" href="#about">ჩვენ შესახებ</a></li>
           <li><a class="link scroll" href="#equipment">ტექნიკა</a></li>
           <li><a class="link scroll animated pulse" href="#parts">ნაწილები</a></li>
-          <li><a class="link scroll" href="#contact">კონტაქტი             </a></li>
+          <li><a class="link scroll" href="#contact">კონტაქტი</a></li>
         </ul>
       </nav>
       <ul class="lang">
@@ -39,10 +39,10 @@
     </div>
     <div class="hero-section">
       <div class="hs-wrapper">
-        <h1 class="hs--title eng">Intertechnics LTD</h1>
+        <h1 class="hs--title en">Intertechnics LTD</h1>
         <p class="hs-lead ka">უმაღლესი ხარისხის სამშენებლო ტექნიკა</p>
       </div>
-      <div class="hero--cta">
+      <div class="hero--cta animated fade-in">
         <div itemscope itemtype="http://schema.org/Organization">
           <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
             <p class="en phone" itemprop="telephone">+995 (32) 2 45 04 56</p>
@@ -53,10 +53,10 @@
     </div>
     <main id="main">
       <section class="section section-one about-us" id="about">
-        <h2 class="section--title ka">ჩვენ შესახებ</h2>
-        <div class="section--wrapper">
-          <div class="content--wrapper"><img src="img/s570.jpg" alt="">
-            <div class="about-us--content">
+        <div class="container">
+          <h2 class="section--title ka">ჩვენ შესახებ</h2>
+          <div class="grid-col-two bg-yellow"><img class="grid-col-left hide-on-small" src="img/s570.jpg" alt="">
+            <div class="about-us--content grid-col-right grid-col-full">
               <p class="ka"><span class="eng">Intertechnics LTD</span>-ის მთავარი მიზანია საბაზრო წილისა და კომპეტენტუნარიანობის შენარჩუნება ცვალებად ქართულ ბაზარზე.</p>
               <p class="ka">კომპანია პარტნიორობს მოწინავე საგზაო-სამშენებლო ტექნიკის მწარმოებელ ბრენდებთან 2005 წლიდან. ეს ურთიერთობები უზრუნველყოფს ინოვაციებისა და უმაღლესი ხარისხის ტექნიკის შემოდინებას ქართულ სამშენებლო სივრცეში.</p>
               <p class="ka">პარტნიორობის პირველ ეტაპს არსებულ და პოტენციურ კლიენტებთან წარმოადგენს ინფორმაციის წვდომადობა და სანდოობა მოთხოვნად პროდუქციაზე.</p>
@@ -74,69 +74,71 @@
         </ul>
       </section>
       <section class="section section-two equipment" id="equipment">
-        <h2 class="section--title ka">ტექნიკა</h2>
-        <div class="section--wrapper">
-          <article class="bobcat article">
-            <figure><img src="img/s570.jpg" alt="bobcat"/></figure>
-            <!--.content-->
-            <h3 class="en article--title">bobcat</h3>
-            <p class="ka article--content">მინი სატვირთელები და ექსკავატორები, ტელესკოპური სატვირთელები და მათი დამხმარე მოწყობილობები.</p><a class="btn ka article--cta" href="https://www.bobcat.com/cis/en/index">სრული პროდუქცია</a>
-          </article>
-          <article class="bomag article">
-            <figure><img src="img/bomag.jpg" alt="bomag"/></figure>
-            <!--.content-->
-            <h3 class="en article--title">bomag</h3>
-            <p class="ka article--content">ასფალტისა და გრუნტის სატკეპნები, ასფალტის დამგებები, ფრეზები, რესაიკლერები და გრუნტის სტაბილიზატორები.</p><a class="btn ka article--cta" href="https://www.bomag.com/world/en/homepage.htm">სრული პროდუქცია</a>
-          </article>
-          <article class="marini article">
-            <figure><img src="img/marini.jpg" alt="marini"/></figure>
-            <!--.content-->
-            <h3 class="en article--title">marini</h3>
-            <p class="ka article--content">ასფალტის მობილური და სტაციონარული ქარხნები.</p><a class="btn ka article--cta" href="http://www.marini.fayat.com/en/">სრული პროდუქცია</a>
-          </article>
-          <article class="powerplus article">
-            <figure><img src="img/powerplus.jpg" alt="powerplus"/></figure>
-            <!--.content-->
-            <h3 class="en article--title">powerplus</h3>
-            <p class="ka article--content">ბორბლებიანი და მუხლუხა ექსკავატორები, ბორბლებიანი სატვირთელები (Loader), ბულდოზერები, მობილური და მუხლუხა ამწეები, ავტოთვითმცლელები.</p><a class="btn ka article--cta" href="http://www.powerplus.us/">სრული პროდუქცია</a>
-          </article>
-          <article class="hbm-nobas article">
-            <figure><img src="img/hbm.jpg" alt="hbm-nobas"/></figure>
-            <!--.content-->
-            <h3 class="en article--title">hbm-nobas</h3>
-            <p class="ka article--content">სხვადასხვა ტიპისა და ზომის გრეიდერები.</p><a class="btn ka article--cta" href="http://www.gp.ag/hbm-nobas/Start/">სრული პროდუქცია</a>
-          </article>
-          <article class="putzmeister article">
-            <figure><img src="img/putzmeister.jpg" alt="putzmeister"/></figure>
-            <!--.content-->
-            <h3 class="en article--title">putzmeister</h3>
-            <p class="ka article--content">ბეტონის სტაციონარული, მობილური და გვირაბის ტუმბოები, ცემენტო-ქვიშის მიწოდებისა და სალესი ტუმბოები. ბეტონის მობილური მიქსერები.</p><a class="btn ka article--cta" href="http://www.putzmeister.com/enu/index.htm">სრული პროდუქცია</a>
-          </article>
-          <article class="terex-finlay article">
-            <figure><img src="img/terex.jpg" alt="terex-finlay"/></figure>
-            <!--.content-->
-            <h3 class="en article--title">terex-finlay</h3>
-            <p class="ka article--content">100–700 ტ/სთ წარმადობის მობილური, ყბებიანი და როტორული სამსხვრევები, მობილური სარეცხი ცხრილები და კლასიფიკატორები.</p><a class="btn ka article--cta" href="https://www.terex.com/mobile-processing-equipment/en/">სრული პროდუქცია</a>
-          </article>
-          <article class="kaeser gmbh article">
-            <figure><img src="img/kaeser.jpg" alt="kaeser gmbh"/></figure>
-            <!--.content-->
-            <h3 class="en article--title">kaeser gmbh</h3>
-            <p class="ka article--content">ჰაერის ინდუსტრიული დანიშნულების სტაციონარული და სამშენებლო დანიშნულების მობილური კომპრესორები.</p><a class="btn ka article--cta" href="http://www.kaeser.com/int-en/">სრული პროდუქცია</a>
-          </article>
-          <article class="ins-makina article">
-            <figure><img src="img/makina.jpg" alt="ins-makina"/></figure>
-            <!--.content-->
-            <h3 class="en article--title">ins-makina</h3>
-            <p class="ka article--content">ბეტონის სტაციონარული და მობილური კვანძები, ქვა–ღორღის სარეცხი და დამხარისხებელი მობილური დანადგარები.</p><a class="btn ka article--cta" href="https://www.insmakina.com/ru/">სრული პროდუქცია</a>
-          </article>
+        <div class="container">
+          <h2 class="section--title ka">ტექნიკა</h2>
+          <div class="grid-col-three">
+            <article class="bobcat article">
+              <figure><img src="img/s570.jpg" alt="bobcat"/></figure>
+              <!--.content-->
+              <h3 class="en article--title">bobcat</h3>
+              <p class="ka article--content">მინი სატვირთელები და ექსკავატორები, ტელესკოპური სატვირთელები და მათი დამხმარე მოწყობილობები.</p><a class="btn ka article--cta" href="https://www.bobcat.com/cis/en/index">სრული პროდუქცია</a>
+            </article>
+            <article class="bomag article">
+              <figure><img src="img/bomag.jpg" alt="bomag"/></figure>
+              <!--.content-->
+              <h3 class="en article--title">bomag</h3>
+              <p class="ka article--content">ასფალტისა და გრუნტის სატკეპნები, ასფალტის დამგებები, ფრეზები, რესაიკლერები და გრუნტის სტაბილიზატორები.</p><a class="btn ka article--cta" href="https://www.bomag.com/world/en/homepage.htm">სრული პროდუქცია</a>
+            </article>
+            <article class="marini article">
+              <figure><img src="img/marini.jpg" alt="marini"/></figure>
+              <!--.content-->
+              <h3 class="en article--title">marini</h3>
+              <p class="ka article--content">ასფალტის მობილური და სტაციონარული ქარხნები.</p><a class="btn ka article--cta" href="http://www.marini.fayat.com/en/">სრული პროდუქცია</a>
+            </article>
+            <article class="powerplus article">
+              <figure><img src="img/powerplus.jpg" alt="powerplus"/></figure>
+              <!--.content-->
+              <h3 class="en article--title">powerplus</h3>
+              <p class="ka article--content">ბორბლებიანი და მუხლუხა ექსკავატორები, ბორბლებიანი სატვირთელები (Loader), ბულდოზერები, მობილური და მუხლუხა ამწეები, ავტოთვითმცლელები.</p><a class="btn ka article--cta" href="http://www.powerplus.us/">სრული პროდუქცია</a>
+            </article>
+            <article class="hbm-nobas article">
+              <figure><img src="img/hbm.jpg" alt="hbm-nobas"/></figure>
+              <!--.content-->
+              <h3 class="en article--title">hbm-nobas</h3>
+              <p class="ka article--content">სხვადასხვა ტიპისა და ზომის გრეიდერები.</p><a class="btn ka article--cta" href="http://www.gp.ag/hbm-nobas/Start/">სრული პროდუქცია</a>
+            </article>
+            <article class="putzmeister article">
+              <figure><img src="img/putzmeister.jpg" alt="putzmeister"/></figure>
+              <!--.content-->
+              <h3 class="en article--title">putzmeister</h3>
+              <p class="ka article--content">ბეტონის სტაციონარული, მობილური და გვირაბის ტუმბოები, ცემენტო-ქვიშის მიწოდებისა და სალესი ტუმბოები. ბეტონის მობილური მიქსერები.</p><a class="btn ka article--cta" href="http://www.putzmeister.com/enu/index.htm">სრული პროდუქცია</a>
+            </article>
+            <article class="terex-finlay article">
+              <figure><img src="img/terex.jpg" alt="terex-finlay"/></figure>
+              <!--.content-->
+              <h3 class="en article--title">terex-finlay</h3>
+              <p class="ka article--content">100–700 ტ/სთ წარმადობის მობილური, ყბებიანი და როტორული სამსხვრევები, მობილური სარეცხი ცხრილები და კლასიფიკატორები.</p><a class="btn ka article--cta" href="https://www.terex.com/mobile-processing-equipment/en/">სრული პროდუქცია</a>
+            </article>
+            <article class="kaeser gmbh article">
+              <figure><img src="img/kaeser.jpg" alt="kaeser gmbh"/></figure>
+              <!--.content-->
+              <h3 class="en article--title">kaeser gmbh</h3>
+              <p class="ka article--content">ჰაერის ინდუსტრიული დანიშნულების სტაციონარული და სამშენებლო დანიშნულების მობილური კომპრესორები.</p><a class="btn ka article--cta" href="http://www.kaeser.com/int-en/">სრული პროდუქცია</a>
+            </article>
+            <article class="ins-makina article">
+              <figure><img src="img/makina.jpg" alt="ins-makina"/></figure>
+              <!--.content-->
+              <h3 class="en article--title">ins-makina</h3>
+              <p class="ka article--content">ბეტონის სტაციონარული და მობილური კვანძები, ქვა–ღორღის სარეცხი და დამხარისხებელი მობილური დანადგარები.</p><a class="btn ka article--cta" href="https://www.insmakina.com/ru/">სრული პროდუქცია</a>
+            </article>
+          </div>
         </div>
       </section>
       <section class="section section-three address" id="contact">
-        <div class="section--wrapper">
-          <div class="content--wrapper">
-            <div class="address-info">
-              <h1 class="c-title ka">საკონტაქტო ინფორმაცია</h1>
+        <div class="container">
+          <h1 class="section--title ka">საკონტაქტო ინფორმაცია</h1>
+          <div class="grid-col-two bg-yellow">
+            <div class="address-info grid-col-left">
               <div itemscope itemtype="http://schema.org/Organization">
                 <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
                   <p class="ka map-marker"><span itemprop="streetAddress"></span>85 ფალიაშვილის ქ. <span itemprop="addressLocality"></span> თბილისი, საქართველო</p>
@@ -149,16 +151,16 @@
               </div>
             </div>
             <!-- Google map for Intertechnics Office-->
-            <div class="address-map">
+            <div class="address-map grid-col-right">
               <div id="map"></div>
             </div>
           </div>
         </div>
       </section>
       <section class="section section-four shop" id="parts">
-        <h2 class="section--title ka">ნაწილები</h2>
-        <div class="section--wrapper">
-          <div class="content--wrapper">
+        <div class="container">
+          <h2 class="section--title ka">ნაწილები</h2>
+          <div class="grid-col-two bg-yellow">
             <!-- Google map for parts shop-->
             <div class="address-map">
               <div id="mapShop"></div>
@@ -175,7 +177,7 @@
       <script async src="//counter.top.ge/counter.js"></script>
       <!-- End of Top.ge counter-->
     </footer>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2revqu6ZJqUnD9llOalXP8mJdH-tWx8U&amp;callback=initMap"></script>
     <script src="js/script.min.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2revqu6ZJqUnD9llOalXP8mJdH-tWx8U&amp;callback=initMap"></script>
   </body>
 </html>

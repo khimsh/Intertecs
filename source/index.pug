@@ -19,13 +19,14 @@ html(lang="ka")
         link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
         
     body
-        header#header
+        header#header.header
             .h--title-wrapper
                 .h--cta-wrapper
                     p გაქვთ კითხვები?
                     a(href="tel:+995 599 50 25 17") +995 599 50 25 17
                 h1 Intertechnics
-                a(href="#"): img.h--logo(src="img/logo.png", alt="Intertechnics Logo")   
+                a(href="#"): img.h--logo(src="img/logo.png", alt="Intertechnics Logo") 
+
             nav#navigation
                 h2.n--title ნავიგაცია
                 ul 
@@ -33,7 +34,8 @@ html(lang="ka")
                     li: a(href="#about" class="link scroll") ჩვენ შესახებ
                     li: a(href="#equipment" class="link scroll") ტექნიკა
                     li: a(href="#parts" class="link scroll").animated.pulse ნაწილები
-                    li: a(href="#contact" class="link scroll") კონტაქტი             
+                    li: a(href="#contact" class="link scroll") კონტაქტი
+
             ul.lang
                 li: a(href="/"): img(src="img/icon-geo.png", alt="flag of Georgia", class="lang--icon lang--icon-first")
                 li: a(href="#"): img(src="img/icon-en.png", alt="flag of England", class="lang--icon")
@@ -45,9 +47,9 @@ html(lang="ka")
 
         .hero-section
             .hs-wrapper
-                h1.hs--title.eng Intertechnics LTD
+                h1.hs--title.en Intertechnics LTD
                 p.hs-lead.ka უმაღლესი ხარისხის სამშენებლო ტექნიკა
-            .hero--cta
+            .hero--cta.animated.fade-in
                 div(itemscope, itemtype='http://schema.org/Organization')
                     div(itemprop="address" itemscope itemtype="http://schema.org/PostalAddress")
                         p.en.phone(itemprop="telephone") +995 (32) 2 45 04 56
@@ -55,11 +57,11 @@ html(lang="ka")
 
         main#main
             section.section.section-one.about-us#about
-                h2.section--title.ka ჩვენ შესახებ
-                .section--wrapper
-                    .content--wrapper
-                        img(src="img/s570.jpg", alt="")
-                        .about-us--content
+                .container
+                    h2.section--title.ka ჩვენ შესახებ
+                    .grid-col-two.bg-yellow
+                        img(src="img/s570.jpg", alt="", class="grid-col-left hide-on-small")
+                        .about-us--content.grid-col-right.grid-col-full
                             p.ka <span class="eng">Intertechnics LTD</span>-ის მთავარი მიზანია საბაზრო წილისა და კომპეტენტუნარიანობის შენარჩუნება ცვალებად ქართულ ბაზარზე.
                             p.ka კომპანია პარტნიორობს მოწინავე საგზაო-სამშენებლო ტექნიკის მწარმოებელ ბრენდებთან 2005 წლიდან. ეს ურთიერთობები უზრუნველყოფს ინოვაციებისა და უმაღლესი ხარისხის ტექნიკის შემოდინებას ქართულ სამშენებლო სივრცეში.
                             p.ka პარტნიორობის პირველ ეტაპს არსებულ და პოტენციურ კლიენტებთან წარმოადგენს ინფორმაციის წვდომადობა და სანდოობა მოთხოვნად პროდუქციაზე.
@@ -73,23 +75,24 @@ html(lang="ka")
                     li.ka გარანტია
 
             section.section.section-two.equipment#equipment
-                h2.section--title.ka ტექნიკა
-                .section--wrapper
-                    +article('bobcat', 'img/s570.jpg', 'მინი სატვირთელები და ექსკავატორები, ტელესკოპური სატვირთელები და მათი დამხმარე მოწყობილობები.', 'https://www.bobcat.com/cis/en/index', 'სრული პროდუქცია')
-                    +article('bomag', 'img/bomag.jpg', 'ასფალტისა და გრუნტის სატკეპნები, ასფალტის დამგებები, ფრეზები, რესაიკლერები და გრუნტის სტაბილიზატორები.', 'https://www.bomag.com/world/en/homepage.htm', 'სრული პროდუქცია')
-                    +article('marini', 'img/marini.jpg', 'ასფალტის მობილური და სტაციონარული ქარხნები.', 'http://www.marini.fayat.com/en/', 'სრული პროდუქცია')
-                    +article('powerplus', 'img/powerplus.jpg', 'ბორბლებიანი და მუხლუხა ექსკავატორები, ბორბლებიანი სატვირთელები (Loader), ბულდოზერები, მობილური და მუხლუხა ამწეები, ავტოთვითმცლელები.', 'http://www.powerplus.us/', 'სრული პროდუქცია')
-                    +article('hbm-nobas', 'img/hbm.jpg', 'სხვადასხვა ტიპისა და ზომის გრეიდერები.', 'http://www.gp.ag/hbm-nobas/Start/', 'სრული პროდუქცია')
-                    +article('putzmeister', 'img/putzmeister.jpg', 'ბეტონის სტაციონარული, მობილური და გვირაბის ტუმბოები, ცემენტო-ქვიშის მიწოდებისა და სალესი ტუმბოები. ბეტონის მობილური მიქსერები.', 'http://www.putzmeister.com/enu/index.htm', 'სრული პროდუქცია')
-                    +article('terex-finlay', 'img/terex.jpg', '100–700 ტ/სთ წარმადობის მობილური, ყბებიანი და როტორული სამსხვრევები, მობილური სარეცხი ცხრილები და კლასიფიკატორები.', 'https://www.terex.com/mobile-processing-equipment/en/', 'სრული პროდუქცია')
-                    +article('kaeser gmbh', 'img/kaeser.jpg', 'ჰაერის ინდუსტრიული დანიშნულების სტაციონარული და სამშენებლო დანიშნულების მობილური კომპრესორები.', 'http://www.kaeser.com/int-en/', 'სრული პროდუქცია')
-                    +article('ins-makina', 'img/makina.jpg', 'ბეტონის სტაციონარული და მობილური კვანძები, ქვა–ღორღის სარეცხი და დამხარისხებელი მობილური დანადგარები.', 'https://www.insmakina.com/ru/', 'სრული პროდუქცია')
+                .container
+                    h2.section--title.ka ტექნიკა
+                    .grid-col-three
+                        +article('bobcat', 'img/s570.jpg', 'მინი სატვირთელები და ექსკავატორები, ტელესკოპური სატვირთელები და მათი დამხმარე მოწყობილობები.', 'https://www.bobcat.com/cis/en/index', 'სრული პროდუქცია')
+                        +article('bomag', 'img/bomag.jpg', 'ასფალტისა და გრუნტის სატკეპნები, ასფალტის დამგებები, ფრეზები, რესაიკლერები და გრუნტის სტაბილიზატორები.', 'https://www.bomag.com/world/en/homepage.htm', 'სრული პროდუქცია')
+                        +article('marini', 'img/marini.jpg', 'ასფალტის მობილური და სტაციონარული ქარხნები.', 'http://www.marini.fayat.com/en/', 'სრული პროდუქცია')
+                        +article('powerplus', 'img/powerplus.jpg', 'ბორბლებიანი და მუხლუხა ექსკავატორები, ბორბლებიანი სატვირთელები (Loader), ბულდოზერები, მობილური და მუხლუხა ამწეები, ავტოთვითმცლელები.', 'http://www.powerplus.us/', 'სრული პროდუქცია')
+                        +article('hbm-nobas', 'img/hbm.jpg', 'სხვადასხვა ტიპისა და ზომის გრეიდერები.', 'http://www.gp.ag/hbm-nobas/Start/', 'სრული პროდუქცია')
+                        +article('putzmeister', 'img/putzmeister.jpg', 'ბეტონის სტაციონარული, მობილური და გვირაბის ტუმბოები, ცემენტო-ქვიშის მიწოდებისა და სალესი ტუმბოები. ბეტონის მობილური მიქსერები.', 'http://www.putzmeister.com/enu/index.htm', 'სრული პროდუქცია')
+                        +article('terex-finlay', 'img/terex.jpg', '100–700 ტ/სთ წარმადობის მობილური, ყბებიანი და როტორული სამსხვრევები, მობილური სარეცხი ცხრილები და კლასიფიკატორები.', 'https://www.terex.com/mobile-processing-equipment/en/', 'სრული პროდუქცია')
+                        +article('kaeser gmbh', 'img/kaeser.jpg', 'ჰაერის ინდუსტრიული დანიშნულების სტაციონარული და სამშენებლო დანიშნულების მობილური კომპრესორები.', 'http://www.kaeser.com/int-en/', 'სრული პროდუქცია')
+                        +article('ins-makina', 'img/makina.jpg', 'ბეტონის სტაციონარული და მობილური კვანძები, ქვა–ღორღის სარეცხი და დამხარისხებელი მობილური დანადგარები.', 'https://www.insmakina.com/ru/', 'სრული პროდუქცია')
                 
             section.section.section-three.address#contact
-                .section--wrapper
-                    .content--wrapper
-                        .address-info
-                            h1.c-title.ka საკონტაქტო ინფორმაცია
+                .container
+                    h1.section--title.ka საკონტაქტო ინფორმაცია
+                    .grid-col-two.bg-yellow
+                        .address-info.grid-col-left
                             div(itemscope, itemtype='http://schema.org/Organization')
                                 div(itemprop="address" itemscope itemtype="http://schema.org/PostalAddress")
                                     p.ka.map-marker #[span(itemprop="streetAddress")]85 ფალიაშვილის ქ. #[span(itemprop="addressLocality")] თბილისი, საქართველო
@@ -99,17 +102,17 @@ html(lang="ka")
                                 p.ka.fax(itemprop="faxNumber") +995 (32) 2 45 04 56(9)
                                 p.envelope.mail(itemprop="email"): a.en(href="mailto:intertecs@caucasus.net") intertecs@caucasus.net
                         // Google map for Intertechnics Office
-                        .address-map
+                        .address-map.grid-col-right
                             #map
 
             section.section.section-four.shop#parts
-                h2.section--title.ka ნაწილები
-                .section--wrapper
-                    .content--wrapper
+                .container
+                    h2.section--title.ka ნაწილები
+                    .grid-col-two.bg-yellow
                         // Google map for parts shop
-                        .address-map
+                        .address-map.grid-col-left
                             #mapShop
-                        p.ka Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi pariatur iste soluta facere blanditiis expedita cumque laborum reprehenderit animi similique! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, voluptas.
+                        p.ka..grid-col-right Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi pariatur iste soluta facere blanditiis expedita cumque laborum reprehenderit animi similique! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, voluptas.
                         
         footer#footer
             p.copyright.eng &copy; Intertecs.ge &#9679; 2018
@@ -118,5 +121,6 @@ html(lang="ka")
             script(async src="//counter.top.ge/counter.js")
             // End of Top.ge counter
         
-        script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2revqu6ZJqUnD9llOalXP8mJdH-tWx8U&callback=initMap")
         script(src="js/script.min.js")
+        script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2revqu6ZJqUnD9llOalXP8mJdH-tWx8U&callback=initMap")
+        

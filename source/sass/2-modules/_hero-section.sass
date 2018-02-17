@@ -21,18 +21,31 @@
     border: 5px solid $text
     padding: 2em 2.4em
     background-color: rgba(0,0,0,.3)
+    @media (max-width: 660px)
+      padding: 1.2em 1.6em
 
     .hs--title
       font-size: 3rem
       font-weight: 400
       text-transform: uppercase
-      letter-spacing: 2px
+      letter-spacing: 4px
       margin: 0
       padding-bottom: .6em
+      @media (max-width: 960px)
+        font-size: 2rem
+      @media (max-width: 660px)
+        letter-spacing: 2px
+        font-size: 1.6rem
 
     .hs-lead
       font-size: 1.4rem
       letter-spacing: 3px
+      @media (max-width: 960px)
+        font-size: 1rem
+        letter-spacing: 2px
+      @media (max-width: 660px)
+        font-size: .8rem
+        letter-spacing: 1px
 
   .hero--cta
     position: absolute
@@ -41,11 +54,14 @@
     text-align: left
     font-size: 1.1rem
     padding: .7em .7em .7em 1.4em
-    color: $text
+    color: #000
+    background: $accent
+    @media (min-width: 660px)
+      animation: fadeIn 1s 2s backwards
 
     a:link,
     a:visited
-      color: $text
+      color: #000
       transition: all .2s linear
       &:hover
         color: shade($text, 30%)
@@ -53,10 +69,20 @@
     .phone:before,
     .envelope:before
       font-family: FontAwesome
-      color: $text
+      color: #000
       margin-right: 10px
       font-size: 1.4rem
     .phone:before
       content: '\f095'
     .envelope:before
       content: "\f0e0"
+
+@keyframes fadeIn
+  0%
+    transform: translateX(-25px)
+    opacity: 0
+  80%
+    transform: translateX(10px)
+  100%
+    transform: translateX(0px)
+    opacity: 1

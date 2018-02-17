@@ -1,3 +1,4 @@
+// Load Google Maps
 function initMap() {
   var intertecs = {lat: 41.710038, lng: 44.754758};
   var map = new google.maps.Map(document.getElementById('map'), {
@@ -17,3 +18,5 @@ function initMap() {
     map: mapShop
   });
 }
+
+
