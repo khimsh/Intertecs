@@ -1,7 +1,7 @@
 /**
  * Navigation
  *
-#navigation
+.primary-nav
     justify-self: center
     h2 
         +hide-from-screen
@@ -24,16 +24,38 @@
 /**
  * Navigation Media Queries
  *
-
+@media (max-width: 860px)
+    .primary-nav
+        height: 0px
+        overflow: hidden
+        transition: all .3s linear
+        grid-row: 2/3
+        grid-column: 2/3
+        ul
+            flex-direction: column
+            margin-top: 1em
+            a
+                padding: .6em 2em
+                margin-right: 0px
+        &.active
+            height: 200px
+            
 
 /**
  * Language links
  *
-#header
-    .lang
-        justify-self: flex-end
-    .lang--icon
-        width: 1.5em
-        height: auto
+.lang
+    justify-self: flex-end
+.lang--icon
+    width: 1.5em
+    height: auto
 .lang--icon-first
     margin-bottom: .4em
+
+@media (max-width: 860px)
+    .lang
+        grid-column: 2/3
+        grid-row: 1/2
+    #header .lang--icon
+        width: 1.4em
+        height: auto

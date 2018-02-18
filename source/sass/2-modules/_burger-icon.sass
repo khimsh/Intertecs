@@ -1,8 +1,8 @@
 .burger-icon
     position: absolute
-    top: 8px
-    right: 5px
-    height: 30px
+    top: 11px
+    right: 18px
+    height: 34px
     width: 42px
     cursor: pointer
     display: none
@@ -12,7 +12,7 @@
         position: absolute
         height: 6px
         width: 100%
-        background-color: $primary
+        background-color: #000
         transition: all .2s ease-in-out
     .bar-top
         top: 0
@@ -22,15 +22,21 @@
         opacity: 1
     .bar-bottom
         bottom: 0  
-    &.active
+    &.closed
         .bar-top
             transform-origin: 0 0
             transform: rotate(45deg)
-            top: 8px
-            left: 4px
+            top: 0px
+            width: 48px
+            left: 6px
         .bar-middle
             opacity: 0
         .bar-bottom
             transform-origin: 0 0
             transform: rotate(-45deg)
+            bottom: -5px
+            width: 48px
+    @media (max-width: 860px)
+        display: block
+    
     

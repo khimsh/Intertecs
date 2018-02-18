@@ -27,23 +27,23 @@ html(lang="ka")
                 h1 Intertechnics
                 a(href="#"): img.h--logo(src="img/logo.png", alt="Intertechnics Logo") 
 
-            nav#navigation
+            nav#navigation.primary-nav
                 h2.n--title ნავიგაცია
                 ul 
                     li: a(href="#" class="link scroll") მთავარი
-                    li: a(href="#about" class="link scroll") ჩვენ შესახებ
-                    li: a(href="#equipment" class="link scroll") ტექნიკა
-                    li: a(href="#parts" class="link scroll").animated.pulse ნაწილები
-                    li: a(href="#contact" class="link scroll") კონტაქტი
+                    li: a(href="#about" class="link scroll" data-scroll) ჩვენ შესახებ
+                    li: a(href="#equipment" class="link scroll" data-scroll) ტექნიკა
+                    li: a(href="#parts" class="link scroll" data-scroll).animated.pulse ნაწილები
+                    li: a(href="#contact" class="link scroll" data-scroll) კონტაქტი
 
             ul.lang
                 li: a(href="/"): img(src="img/icon-geo.png", alt="flag of Georgia", class="lang--icon lang--icon-first")
                 li: a(href="#"): img(src="img/icon-en.png", alt="flag of England", class="lang--icon")
 
-        .burger-icon
-            .bar-top 
-            .bar-middle
-            .bar-bottom
+            .burger-icon
+                .bar-top 
+                .bar-middle
+                .bar-bottom
 
         .hero-section
             .hs-wrapper
@@ -112,10 +112,10 @@ html(lang="ka")
                         // Google map for parts shop
                         .address-map.grid-col-left
                             #mapShop
-                        p.ka..grid-col-right Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi pariatur iste soluta facere blanditiis expedita cumque laborum reprehenderit animi similique! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, voluptas.
+                        p.ka.grid-col-right Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi pariatur iste soluta facere blanditiis expedita cumque laborum reprehenderit animi similique! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, voluptas.
                         
         footer#footer
-            p.copyright.eng &copy; Intertecs.ge &#9679; 2018
+            p.copyright.en &copy; Intertecs.ge &#9679; 2018
             // Top.ge counter
             div#top-ge-counter-container(data-site-id="108307")
             script(async src="//counter.top.ge/counter.js")

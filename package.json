@@ -19,5 +19,8 @@
     "gulp-pug2": "0.0.2",
     "gulp-sass": "^3.1.0",
     "gulp-uglify": "^3.0.0"
+  },
+  "dependencies": {
+    "smooth-scroll": "^12.1.5"
   }
 }

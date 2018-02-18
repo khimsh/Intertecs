@@ -17,26 +17,26 @@
         </div>
         <h1>Intertechnics</h1><a href="#"><img class="h--logo" src="img/logo.png" alt="Intertechnics Logo"></a>
       </div>
-      <nav id="navigation">
+      <nav class="primary-nav" id="navigation">
         <h2 class="n--title">ნავიგაცია</h2>
         <ul> 
           <li><a class="link scroll" href="#">მთავარი</a></li>
-          <li><a class="link scroll" href="#about">ჩვენ შესახებ</a></li>
-          <li><a class="link scroll" href="#equipment">ტექნიკა</a></li>
-          <li><a class="link scroll animated pulse" href="#parts">ნაწილები</a></li>
-          <li><a class="link scroll" href="#contact">კონტაქტი</a></li>
+          <li><a class="link scroll" href="#about" data-scroll>ჩვენ შესახებ</a></li>
+          <li><a class="link scroll" href="#equipment" data-scroll>ტექნიკა</a></li>
+          <li><a class="link scroll animated pulse" href="#parts" data-scroll>ნაწილები</a></li>
+          <li><a class="link scroll" href="#contact" data-scroll>კონტაქტი</a></li>
         </ul>
       </nav>
       <ul class="lang">
         <li><a href="/"><img class="lang--icon lang--icon-first" src="img/icon-geo.png" alt="flag of Georgia"></a></li>
         <li><a href="#"><img class="lang--icon" src="img/icon-en.png" alt="flag of England"></a></li>
       </ul>
+      <div class="burger-icon">
+        <div class="bar-top"> </div>
+        <div class="bar-middle"></div>
+        <div class="bar-bottom"></div>
+      </div>
     </header>
-    <div class="burger-icon">
-      <div class="bar-top"> </div>
-      <div class="bar-middle"></div>
-      <div class="bar-bottom"></div>
-    </div>
     <div class="hero-section">
       <div class="hs-wrapper">
         <h1 class="hs--title en">Intertechnics LTD</h1>
@@ -162,16 +162,16 @@
           <h2 class="section--title ka">ნაწილები</h2>
           <div class="grid-col-two bg-yellow">
             <!-- Google map for parts shop-->
-            <div class="address-map">
+            <div class="address-map grid-col-left">
               <div id="mapShop"></div>
             </div>
-            <p class="ka">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi pariatur iste soluta facere blanditiis expedita cumque laborum reprehenderit animi similique! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, voluptas.</p>
+            <p class="ka grid-col-right">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi pariatur iste soluta facere blanditiis expedita cumque laborum reprehenderit animi similique! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, voluptas.</p>
           </div>
         </div>
       </section>
     </main>
     <footer id="footer">
-      <p class="copyright eng">&copy; Intertecs.ge &#9679; 2018</p>
+      <p class="copyright en">&copy; Intertecs.ge &#9679; 2018</p>
       <!-- Top.ge counter-->
       <div id="top-ge-counter-container" data-site-id="108307"></div>
       <script async src="//counter.top.ge/counter.js"></script>

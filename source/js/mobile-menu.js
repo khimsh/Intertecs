@@ -1,26 +1,24 @@
-// /*
-// * Navigation slideout and burger icon transform
-// */
-// var burger = document.querySelector('.burger-icon');
-// var navMenu = document.querySelector('.navigations-wrapper');
-// var navLink = document.querySelectorAll('.nav-link');
-// var logo = document.querySelector('.header-icon');
+/*
+* Navigation slideout and burger icon transform
+*/
+var burger = document.querySelector('.burger-icon');
+var navMenu = document.querySelector('#navigation');
+var navLink = document.querySelectorAll('.link');
 
-// burger.addEventListener('click', function(){
-//   toggleMenu();
-// });
+burger.addEventListener('click', function(){
+  toggleMenu();
+});
 
-// /*
-// * Closes the navigation on click
-// */
-// navLink.forEach(function (element){
-//   element.addEventListener("click", function(){
-//     toggleMenu();
-//   });
-// });
+/*
+* Closes the navigation on click
+*/
+navLink.forEach(function (element){
+  element.addEventListener("click", function(){
+    toggleMenu();
+  });
+});
 
-// function toggleMenu() {
-//   burger.classList.toggle('closed');
-//   navMenu.classList.toggle('active');
-//   logo.classList.toggle('active');
-// }
+function toggleMenu() {
+  burger.classList.toggle('closed');
+  navMenu.classList.toggle('active');
+}

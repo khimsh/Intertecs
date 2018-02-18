@@ -45,6 +45,18 @@
         margin-right: 0
     @media (max-width: 560px)
       grid-template-columns: 1fr
+      li
+        padding: 0
+        padding-left: 2.6em
+        justify-self: flex-start
+        font-size: .9rem
+        &:before
+          font-size: 1.4rem
+          left: 0
+          transform: translateX(0px)
+          top: -.4em
+    @media (max-width: 320px)
+      width: 90vw
 
 
 .bg-yellow
