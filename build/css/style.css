@@ -428,7 +428,7 @@ a {
 .lang {
   justify-self: flex-end; }
 
-.lang--icon {
+#header .lang--icon {
   width: 1.5em;
   height: auto; }
 
