@@ -30,15 +30,14 @@ html(lang="ka")
             nav#navigation.primary-nav
                 h2.n--title ნავიგაცია
                 ul 
-                    li: a(href="#" class="link scroll") მთავარი
-                    li: a(href="#about" class="link scroll" data-scroll) ჩვენ შესახებ
-                    li: a(href="#equipment" class="link scroll" data-scroll) ტექნიკა
-                    li: a(href="#parts" class="link scroll" data-scroll).animated.pulse ნაწილები
-                    li: a(href="#contact" class="link scroll" data-scroll) კონტაქტი
-
-            ul.lang
-                li: a(href="/"): img(src="img/icon-geo.png", alt="flag of Georgia", class="lang--icon lang--icon-first")
-                li: a(href="#"): img(src="img/icon-en.png", alt="flag of England", class="lang--icon")
+                    li: a(href="#" class="link scroll ka") მთავარი
+                    li: a(href="#about" class="link scroll ka") ჩვენ შესახებ
+                    li: a(href="#equipment" class="link scroll ka") ტექნიკა
+                    li: a(href="#parts" class="link scroll ka").animated.pulse ნაწილები
+                    li: a(href="#contact" class="link scroll ka link-last") კონტაქტი
+                    ul.lang
+                        li: a(href="/" class="ka link") ქართ
+                        li: a(href="#" class="en link") ENG
 
             .burger-icon
                 .bar-top 
@@ -60,7 +59,7 @@ html(lang="ka")
                 .container
                     h2.section--title.ka ჩვენ შესახებ
                     .grid-col-two.bg-yellow
-                        img(src="img/s570.jpg", alt="", class="grid-col-left hide-on-small")
+                        img(src="img/bobcat.jpg", alt="", class="grid-col-left hide-on-small")
                         .about-us--content.grid-col-right.grid-col-full
                             p.ka <span class="eng">Intertechnics LTD</span>-ის მთავარი მიზანია საბაზრო წილისა და კომპეტენტუნარიანობის შენარჩუნება ცვალებად ქართულ ბაზარზე.
                             p.ka კომპანია პარტნიორობს მოწინავე საგზაო-სამშენებლო ტექნიკის მწარმოებელ ბრენდებთან 2005 წლიდან. ეს ურთიერთობები უზრუნველყოფს ინოვაციებისა და უმაღლესი ხარისხის ტექნიკის შემოდინებას ქართულ სამშენებლო სივრცეში.
@@ -78,15 +77,15 @@ html(lang="ka")
                 .container
                     h2.section--title.ka ტექნიკა
                     .grid-col-three
-                        +article('bobcat', 'img/s570.jpg', 'მინი სატვირთელები და ექსკავატორები, ტელესკოპური სატვირთელები და მათი დამხმარე მოწყობილობები.', 'https://www.bobcat.com/cis/en/index', 'სრული პროდუქცია')
+                        +article('bobcat', 'img/bobcat.jpg', 'მინი სატვირთელები და ექსკავატორები, ტელესკოპური სატვირთელები და მათი დამხმარე მოწყობილობები.', 'https://www.bobcat.com/cis/en/index', 'სრული პროდუქცია')
                         +article('bomag', 'img/bomag.jpg', 'ასფალტისა და გრუნტის სატკეპნები, ასფალტის დამგებები, ფრეზები, რესაიკლერები და გრუნტის სტაბილიზატორები.', 'https://www.bomag.com/world/en/homepage.htm', 'სრული პროდუქცია')
                         +article('marini', 'img/marini.jpg', 'ასფალტის მობილური და სტაციონარული ქარხნები.', 'http://www.marini.fayat.com/en/', 'სრული პროდუქცია')
                         +article('powerplus', 'img/powerplus.jpg', 'ბორბლებიანი და მუხლუხა ექსკავატორები, ბორბლებიანი სატვირთელები (Loader), ბულდოზერები, მობილური და მუხლუხა ამწეები, ავტოთვითმცლელები.', 'http://www.powerplus.us/', 'სრული პროდუქცია')
                         +article('hbm-nobas', 'img/hbm.jpg', 'სხვადასხვა ტიპისა და ზომის გრეიდერები.', 'http://www.gp.ag/hbm-nobas/Start/', 'სრული პროდუქცია')
                         +article('putzmeister', 'img/putzmeister.jpg', 'ბეტონის სტაციონარული, მობილური და გვირაბის ტუმბოები, ცემენტო-ქვიშის მიწოდებისა და სალესი ტუმბოები. ბეტონის მობილური მიქსერები.', 'http://www.putzmeister.com/enu/index.htm', 'სრული პროდუქცია')
-                        +article('terex-finlay', 'img/terex.jpg', '100–700 ტ/სთ წარმადობის მობილური, ყბებიანი და როტორული სამსხვრევები, მობილური სარეცხი ცხრილები და კლასიფიკატორები.', 'https://www.terex.com/mobile-processing-equipment/en/', 'სრული პროდუქცია')
+                        +article('terex-finlay', 'img/terex-finlay.jpg', '100–700 ტ/სთ წარმადობის მობილური, ყბებიანი და როტორული სამსხვრევები, მობილური სარეცხი ცხრილები და კლასიფიკატორები.', 'https://www.terex.com/mobile-processing-equipment/en/', 'სრული პროდუქცია')
                         +article('kaeser gmbh', 'img/kaeser.jpg', 'ჰაერის ინდუსტრიული დანიშნულების სტაციონარული და სამშენებლო დანიშნულების მობილური კომპრესორები.', 'http://www.kaeser.com/int-en/', 'სრული პროდუქცია')
-                        +article('ins-makina', 'img/makina.jpg', 'ბეტონის სტაციონარული და მობილური კვანძები, ქვა–ღორღის სარეცხი და დამხარისხებელი მობილური დანადგარები.', 'https://www.insmakina.com/ru/', 'სრული პროდუქცია')
+                        +article('ins-makina', 'img/ins-makina.jpg', 'ბეტონის სტაციონარული და მობილური კვანძები, ქვა–ღორღის სარეცხი და დამხარისხებელი მობილური დანადგარები.', 'https://www.insmakina.com/ru/', 'სრული პროდუქცია')
                 
             section.section.section-three.address#contact
                 .container
@@ -112,7 +111,11 @@ html(lang="ka")
                         // Google map for parts shop
                         .address-map.grid-col-left
                             #mapShop
-                        p.ka.grid-col-right Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi pariatur iste soluta facere blanditiis expedita cumque laborum reprehenderit animi similique! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, voluptas.
+                        .address-info.grid-col-right
+                            div(itemscope, itemtype='http://schema.org/Organization')
+                                div(itemprop="address" itemscope itemtype="http://schema.org/PostalAddress")
+                                    p.ka სამშენებლო ტექნიკის ნაწილები ოფიციალური მწარმოებლებისგან!
+                                    p.ka.map-marker <span itemprop="streetAddress">6 პეტრე იბერის ქ.</span><span itemprop="addressLocality"> თბილისი, საქართველო</span>
                         
         footer#footer
             p.copyright.en &copy; Intertecs.ge &#9679; 2018

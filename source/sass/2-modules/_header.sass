@@ -2,13 +2,18 @@
     width: 100%
     padding: .6em 1em
     background-color: $accent
-    display: grid
-    grid-template-columns: 1fr auto 1fr
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    position: relative
     h1 
         +hide-from-screen
     img 
         height: 2.2em
         width: auto
+    .h--logo
+        z-index: 16
+        position: relative
 
 .h--cta-wrapper
     +hide-from-screen

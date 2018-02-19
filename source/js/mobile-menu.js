@@ -22,3 +22,8 @@ function toggleMenu() {
   burger.classList.toggle('closed');
   navMenu.classList.toggle('active');
 }
+
+var wobble = document.querySelector('.pulse');
+wobble.addEventListener("click", function() {
+  wobble.classList.remove("pulse");
+});

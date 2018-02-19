@@ -20,17 +20,17 @@
       <nav class="primary-nav" id="navigation">
         <h2 class="n--title">ნავიგაცია</h2>
         <ul> 
-          <li><a class="link scroll" href="#">მთავარი</a></li>
-          <li><a class="link scroll" href="#about" data-scroll>ჩვენ შესახებ</a></li>
-          <li><a class="link scroll" href="#equipment" data-scroll>ტექნიკა</a></li>
-          <li><a class="link scroll animated pulse" href="#parts" data-scroll>ნაწილები</a></li>
-          <li><a class="link scroll" href="#contact" data-scroll>კონტაქტი</a></li>
+          <li><a class="link scroll ka" href="#">მთავარი</a></li>
+          <li><a class="link scroll ka" href="#about">ჩვენ შესახებ</a></li>
+          <li><a class="link scroll ka" href="#equipment">ტექნიკა</a></li>
+          <li><a class="link scroll ka animated pulse" href="#parts">ნაწილები</a></li>
+          <li><a class="link scroll ka link-last" href="#contact">კონტაქტი</a></li>
+          <ul class="lang">
+            <li><a class="ka link" href="/">ქართ</a></li>
+            <li><a class="en link" href="#">ENG</a></li>
+          </ul>
         </ul>
       </nav>
-      <ul class="lang">
-        <li><a href="/"><img class="lang--icon lang--icon-first" src="img/icon-geo.png" alt="flag of Georgia"></a></li>
-        <li><a href="#"><img class="lang--icon" src="img/icon-en.png" alt="flag of England"></a></li>
-      </ul>
       <div class="burger-icon">
         <div class="bar-top"> </div>
         <div class="bar-middle"></div>
@@ -55,7 +55,7 @@
       <section class="section section-one about-us" id="about">
         <div class="container">
           <h2 class="section--title ka">ჩვენ შესახებ</h2>
-          <div class="grid-col-two bg-yellow"><img class="grid-col-left hide-on-small" src="img/s570.jpg" alt="">
+          <div class="grid-col-two bg-yellow"><img class="grid-col-left hide-on-small" src="img/bobcat.jpg" alt="">
             <div class="about-us--content grid-col-right grid-col-full">
               <p class="ka"><span class="eng">Intertechnics LTD</span>-ის მთავარი მიზანია საბაზრო წილისა და კომპეტენტუნარიანობის შენარჩუნება ცვალებად ქართულ ბაზარზე.</p>
               <p class="ka">კომპანია პარტნიორობს მოწინავე საგზაო-სამშენებლო ტექნიკის მწარმოებელ ბრენდებთან 2005 წლიდან. ეს ურთიერთობები უზრუნველყოფს ინოვაციებისა და უმაღლესი ხარისხის ტექნიკის შემოდინებას ქართულ სამშენებლო სივრცეში.</p>
@@ -78,7 +78,7 @@
           <h2 class="section--title ka">ტექნიკა</h2>
           <div class="grid-col-three">
             <article class="bobcat article">
-              <figure><img src="img/s570.jpg" alt="bobcat"/></figure>
+              <figure><img src="img/bobcat.jpg" alt="bobcat"/></figure>
               <!--.content-->
               <h3 class="en article--title">bobcat</h3>
               <p class="ka article--content">მინი სატვირთელები და ექსკავატორები, ტელესკოპური სატვირთელები და მათი დამხმარე მოწყობილობები.</p><a class="btn ka article--cta" href="https://www.bobcat.com/cis/en/index">სრული პროდუქცია</a>
@@ -114,7 +114,7 @@
               <p class="ka article--content">ბეტონის სტაციონარული, მობილური და გვირაბის ტუმბოები, ცემენტო-ქვიშის მიწოდებისა და სალესი ტუმბოები. ბეტონის მობილური მიქსერები.</p><a class="btn ka article--cta" href="http://www.putzmeister.com/enu/index.htm">სრული პროდუქცია</a>
             </article>
             <article class="terex-finlay article">
-              <figure><img src="img/terex.jpg" alt="terex-finlay"/></figure>
+              <figure><img src="img/terex-finlay.jpg" alt="terex-finlay"/></figure>
               <!--.content-->
               <h3 class="en article--title">terex-finlay</h3>
               <p class="ka article--content">100–700 ტ/სთ წარმადობის მობილური, ყბებიანი და როტორული სამსხვრევები, მობილური სარეცხი ცხრილები და კლასიფიკატორები.</p><a class="btn ka article--cta" href="https://www.terex.com/mobile-processing-equipment/en/">სრული პროდუქცია</a>
@@ -126,7 +126,7 @@
               <p class="ka article--content">ჰაერის ინდუსტრიული დანიშნულების სტაციონარული და სამშენებლო დანიშნულების მობილური კომპრესორები.</p><a class="btn ka article--cta" href="http://www.kaeser.com/int-en/">სრული პროდუქცია</a>
             </article>
             <article class="ins-makina article">
-              <figure><img src="img/makina.jpg" alt="ins-makina"/></figure>
+              <figure><img src="img/ins-makina.jpg" alt="ins-makina"/></figure>
               <!--.content-->
               <h3 class="en article--title">ins-makina</h3>
               <p class="ka article--content">ბეტონის სტაციონარული და მობილური კვანძები, ქვა–ღორღის სარეცხი და დამხარისხებელი მობილური დანადგარები.</p><a class="btn ka article--cta" href="https://www.insmakina.com/ru/">სრული პროდუქცია</a>
@@ -165,7 +165,14 @@
             <div class="address-map grid-col-left">
               <div id="mapShop"></div>
             </div>
-            <p class="ka grid-col-right">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi pariatur iste soluta facere blanditiis expedita cumque laborum reprehenderit animi similique! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, voluptas.</p>
+            <div class="address-info grid-col-right">
+              <div itemscope itemtype="http://schema.org/Organization">
+                <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                  <p class="ka">სამშენებლო ტექნიკის ნაწილები ოფიციალური მწარმოებლებისგან!</p>
+                  <p class="ka map-marker"><span itemprop="streetAddress">6 პეტრე იბერის ქ.</span><span itemprop="addressLocality"> თბილისი, საქართველო</span></p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

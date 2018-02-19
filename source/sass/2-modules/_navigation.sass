@@ -8,7 +8,8 @@
     ul
         display: flex
         flex-direction: row
-    a 
+    .link:link,
+    .link:visited
         display: block
         padding: .6em
         margin-right: .4em
@@ -20,42 +21,54 @@
         &:active
             background-color: $primary-text
             color: $accent
+    .link-last
+        border-right: 2px solid #000000
 
 /**
  * Navigation Media Queries
  *
 @media (max-width: 860px)
     .primary-nav
+        position: absolute
         height: 0px
         overflow: hidden
         transition: all .3s linear
-        grid-row: 2/3
-        grid-column: 2/3
-        ul
+        z-index: 10
+        left: 0
+        right: 0
+        padding-top: .2em
+        background-color: $accent
+        & > ul
             flex-direction: column
-            margin-top: 1em
+            margin-top: 2.2em
+            padding: 0
+            text-align: center
             a
                 padding: .6em 2em
                 margin-right: 0px
         &.active
-            height: 200px
-            
+            height: 19em
+        .link-last
+            border: none
+            border-bottom: 2px solid #000000
+        .lang
+            display: flex
+            flex-direction: column
 
-/**
- * Language links
- *
-.lang
-    justify-self: flex-end
-#header .lang--icon
-    width: 1.5em
-    height: auto
-.lang--icon-first
-    margin-bottom: .4em
 
-@media (max-width: 860px)
-    .lang
-        grid-column: 2/3
-        grid-row: 1/2
-    #header .lang--icon
-        width: 1.4em
-        height: auto
+.pulse
+    animation: pulse 1s both infinite 
+
+@keyframes pulse 
+  from 
+    transform: scale3d(1, 1, 1)
+    color: #000
+    font-weight: normal
+  50% 
+    transform: scale3d(1.15, 1.15, 1.15)
+    color: $it-red
+    font-weight: 700
+  to
+    transform: scale3d(1, 1, 1)
+    color: #000
+    font-weight: normal
