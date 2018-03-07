@@ -1,5 +1,3 @@
-import { toUnicode } from "punycode";
-
 // JS for displaying Pop-up
 var popUp = document.getElementById('pop-up');
 var btnClose = document.getElementById('btn-close');

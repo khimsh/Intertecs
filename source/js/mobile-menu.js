@@ -19,9 +19,3 @@ function toggleMenu() {
   burger.classList.toggle('closed');
   navMenu.classList.toggle('active');
 }
-
-// Removes Pulse class from Nav Link on Click
-// var wobble = document.querySelector('.pulse');
-// wobble.addEventListener("click", function() {
-//   wobble.classList.remove("pulse");
-// });

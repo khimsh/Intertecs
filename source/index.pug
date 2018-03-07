@@ -17,7 +17,7 @@ html(lang="ka")
         link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700")
         link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
 
-    body
+    body#body
         header#header.header
             .h--title-wrapper
                 h1 Intertechnics
@@ -119,7 +119,10 @@ html(lang="ka")
                 .pop-up-content-wrapper
                     h3.pop-up-header.ka სიახლე!
                     p.pop-up-content.ka დიღომში, პეტრე იბერის ქუჩაზე გაიხსნა სამშენებლო ტექნიკის ნაწილების მაღაზია.
-                    a(href="#parts" id="btn-redirect" class="link ka") დეტალების ნახვა
+                    a(href="#parts" id="btn-redirect" class="ka scroll") დეტალების ნახვა
+
+        .scroll-to-top#scroll-to-top
+            a(href="#body").scroll: i.fa.fa-angle-double-up
 
         footer#footer
             p.copyright.en &copy; Intertecs.ge &#9679; 2018
