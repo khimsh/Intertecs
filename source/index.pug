@@ -3,9 +3,9 @@ mixin article(title, src, description, href, ctaText)
         figure
             img(src=src alt=title)
         //.content
-        h3.en.article--title= title 
+        h3.en.article--title= title
         p.ka.article--content= description
-        a(href=href, class="btn ka article--cta")= ctaText
+        a(href=href, class="btn ka article--cta", target="_blank")= ctaText
 
 doctype html
 html(lang="ka")
@@ -14,33 +14,29 @@ html(lang="ka")
         meta(name="viewport", content="width=device-width, initial-scale=1")
         title Intertecs LTD | Construction Machinery
         link(rel="stylesheet" href="css/style.css")
-        link(rel="stylesheet", href="//cdn.web-fonts.ge/fonts/bpg-algeti/css/bpg-algeti.min.css")
         link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700")
         link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
-        
+
     body
         header#header.header
             .h--title-wrapper
-                .h--cta-wrapper
-                    p გაქვთ კითხვები?
-                    a(href="tel:+995 599 50 25 17") +995 599 50 25 17
                 h1 Intertechnics
-                a(href="#"): img.h--logo(src="img/logo.png", alt="Intertechnics Logo") 
+                a(href="#"): img.h--logo(src="img/logo.png", alt="Intertechnics Logo")
 
             nav#navigation.primary-nav
                 h2.n--title ნავიგაცია
-                ul 
+                ul
                     li: a(href="#" class="link scroll ka") მთავარი
                     li: a(href="#about" class="link scroll ka") ჩვენ შესახებ
                     li: a(href="#equipment" class="link scroll ka") ტექნიკა
-                    li: a(href="#parts" class="link scroll ka").animated.pulse ნაწილები
+                    li: a(href="#parts" class="link scroll ka") ნაწილები
                     li: a(href="#contact" class="link scroll ka link-last") კონტაქტი
                     ul.lang
                         li: a(href="/" class="ka link") ქართ
                         li: a(href="#" class="en link") ENG
 
             .burger-icon
-                .bar-top 
+                .bar-top
                 .bar-middle
                 .bar-bottom
 
@@ -51,7 +47,7 @@ html(lang="ka")
             .hero--cta.animated.fade-in
                 div(itemscope, itemtype='http://schema.org/Organization')
                     div(itemprop="address" itemscope itemtype="http://schema.org/PostalAddress")
-                        p.en.phone(itemprop="telephone") +995 (32) 2 45 04 56
+                        p.en.phone(itemprop="telephone"): a(href="tel:+995 599 50 25 17") +995 (32) 2 45 04 56
                         p.envelope.mail(itemprop="email"): a.en(href="mailto:intertecs@caucasus.net") intertecs@caucasus.net
 
         main#main
@@ -68,7 +64,7 @@ html(lang="ka")
                 h2.section--title.ka ჩვენ გთავაზობთ
                 ul.offers--wrapper
                     li.ka ხარისხთან შესაბამისი ფასები
-                    li.ka ტექნიკის სწრაფი ტრანსპორტირება 
+                    li.ka ტექნიკის სწრაფი ტრანსპორტირება
                     li.ka გადახდის მოქნილი პირობები
                     li.ka ცვეთადი ნაწილები და <span class="en">After-service</span>
                     li.ka გარანტია
@@ -86,7 +82,7 @@ html(lang="ka")
                         +article('terex-finlay', 'img/terex-finlay.jpg', '100–700 ტ/სთ წარმადობის მობილური, ყბებიანი და როტორული სამსხვრევები, მობილური სარეცხი ცხრილები და კლასიფიკატორები.', 'https://www.terex.com/mobile-processing-equipment/en/', 'სრული პროდუქცია')
                         +article('kaeser gmbh', 'img/kaeser.jpg', 'ჰაერის ინდუსტრიული დანიშნულების სტაციონარული და სამშენებლო დანიშნულების მობილური კომპრესორები.', 'http://www.kaeser.com/int-en/', 'სრული პროდუქცია')
                         +article('ins-makina', 'img/ins-makina.jpg', 'ბეტონის სტაციონარული და მობილური კვანძები, ქვა–ღორღის სარეცხი და დამხარისხებელი მობილური დანადგარები.', 'https://www.insmakina.com/ru/', 'სრული პროდუქცია')
-                
+
             section.section.section-three.address#contact
                 .container
                     h1.section--title.ka საკონტაქტო ინფორმაცია
@@ -116,14 +112,21 @@ html(lang="ka")
                                 div(itemprop="address" itemscope itemtype="http://schema.org/PostalAddress")
                                     p.ka სამშენებლო ტექნიკის ნაწილები ოფიციალური მწარმოებლებისგან!
                                     p.ka.map-marker <span itemprop="streetAddress">6 პეტრე იბერის ქ.</span><span itemprop="addressLocality"> თბილისი, საქართველო</span>
-                        
+
+        div#pop-up.pop-up
+            div.pop-up-wrapper
+                span.close#btn-close &times;
+                .pop-up-content-wrapper
+                    h3.pop-up-header.ka სიახლე!
+                    p.pop-up-content.ka დიღომში, პეტრე იბერის ქუჩაზე გაიხსნა სამშენებლო ტექნიკის ნაწილების მაღაზია.
+                    a(href="#parts" id="btn-redirect" class="link ka") დეტალების ნახვა
+
         footer#footer
             p.copyright.en &copy; Intertecs.ge &#9679; 2018
             // Top.ge counter
             div#top-ge-counter-container(data-site-id="108307")
             script(async src="//counter.top.ge/counter.js")
             // End of Top.ge counter
-        
+
         script(src="js/script.min.js")
         script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2revqu6ZJqUnD9llOalXP8mJdH-tWx8U&callback=initMap")
-        

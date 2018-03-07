@@ -4,6 +4,8 @@
 .container
   width: 85vw
   margin: 0 auto 
+  @media (min-width: 1400px)
+    width: 65vw
   
 @supports (display: grid)
   .grid-col-three
@@ -15,11 +17,11 @@
     @media (max-width: 960px)
       grid-template-columns: repeat(2, 1fr)
     @media (max-width: 660px)
-      width: 70vw
+      width: 65vw
       margin: 0 auto
       grid-template-columns: 1fr
       grid-column-gap: 0
-    @media (max-width: 320px)
+    @media (max-width: 420px)
       width: 85vw
     .article
       width: auto

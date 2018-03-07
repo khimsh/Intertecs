@@ -16,6 +16,8 @@
   align-items: center
   justify-content: center
   margin-bottom: 3em
+  @media (max-width: 420px)
+    background-image: url('../img/hero-image-sm.jpg')
 
   .hs-wrapper
     border: 5px solid $text
@@ -71,7 +73,7 @@
       transition: all .2s linear
       &:hover
         color: shade($text, 30%)
-        
+
     .phone:before,
     .envelope:before
       font-family: FontAwesome
@@ -84,7 +86,6 @@
       content: '\f095'
     .envelope:before
       content: "\f0e0"
-    
 
 @keyframes fadeIn
   0%
