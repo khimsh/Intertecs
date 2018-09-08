@@ -19,21 +19,21 @@ html(lang="ka")
 
     body#body
         header#header.header
-            .h--title-wrapper
+            .header__title-wrapper
                 h1 Intertechnics
-                a(href="#"): img.h--logo(src="img/logo.png", alt="Intertechnics Logo")
+                a(href="#"): img.header__logo(src="img/Logo.png", alt="Intertechnics Logo")
 
-            nav#navigation.primary-nav
-                h2.n--title ნავიგაცია
-                ul
-                    li: a(href="#" class="link scroll ka") მთავარი
-                    li: a(href="#about" class="link scroll ka") ჩვენ შესახებ
-                    li: a(href="#equipment" class="link scroll ka") ტექნიკა
-                    li: a(href="#parts" class="link scroll ka") ნაწილები
-                    li: a(href="#contact" class="link scroll ka link-last") კონტაქტი
-                    ul.lang
-                        li: a(href="/" class="ka link") ქართ
-                        li: a(href="#" class="en link") ENG
+            nav#navigation.nav
+                h2.sr-only ნავიგაცია
+                ul.nav__list
+                    li.nav__item: a(href="#").nav__link.scroll.ka მთავარი
+                    li.nav__item: a(href="#about").nav__link.scroll.ka ჩვენ შესახებ
+                    li.nav__item: a(href="#equipment").nav__link.scroll.ka ტექნიკა
+                    li.nav__item: a(href="#parts").nav__link.scroll.ka ნაწილები
+                    li.nav__item: a(href="#contact").nav__link.scroll.ka კონტაქტი
+                    ul.nav__list.nav__list--lang
+                        li: a(href="/").nav__link.nav__link--white.ka ქართ
+                        li: a(href="#").nav__link.nav__link--white.en ENG
 
             .burger-icon
                 .bar-top
@@ -41,20 +41,20 @@ html(lang="ka")
                 .bar-bottom
 
         .hero-section
-            .hs-wrapper
-                h1.hs--title.en Intertechnics LTD
-                p.hs-lead.ka უმაღლესი ხარისხის სამშენებლო ტექნიკა
-            .hero--cta.animated.fade-in
-                div(itemscope, itemtype='http://schema.org/Organization')
-                    div(itemprop="address" itemscope itemtype="http://schema.org/PostalAddress")
-                        p.en.phone(itemprop="telephone"): a(href="tel:+995 599 50 25 17") +995 (32) 2 45 04 56
-                        p.envelope.mail(itemprop="email"): a.en(href="mailto:intertecs@caucasus.net") intertecs@caucasus.net
+            .hero-section__wrapper
+                h1.hero-section__title.en Intertechnics LTD
+                p.hero-section__lead.ka უმაღლესი ხარისხის სამშენებლო ტექნიკა
+
+            .hero__cta.animated.fade-in(itemscope, itemtype='http://schema.org/Organization')
+                div(itemprop="address" itemscope itemtype="http://schema.org/PostalAddress")
+                    span.en.phone(itemprop="telephone"): a(href="tel:+995 599 50 25 17") +995 (32) 2 45 04 56
+                    span.envelope.mail(itemprop="email"): a.en(href="mailto:intertecs@caucasus.net") intertecs@caucasus.net
 
         main#main
             section.section.section-one.about-us#about
                 .container
                     h2.section--title.ka ჩვენ შესახებ
-                    .grid-col-two.bg-yellow
+                    .grid-col-two.bg-grey
                         img(src="img/bobcat.jpg", alt="", class="grid-col-left hide-on-small")
                         .about-us--content.grid-col-right.grid-col-full
                             p.ka <span class="eng">Intertechnics LTD</span>-ის მთავარი მიზანია საბაზრო წილისა და კომპეტენტუნარიანობის შენარჩუნება ცვალებად ქართულ ბაზარზე.
@@ -86,7 +86,7 @@ html(lang="ka")
             section.section.section-three.address#contact
                 .container
                     h1.section--title.ka საკონტაქტო ინფორმაცია
-                    .grid-col-two.bg-yellow
+                    .grid-col-two.bg-grey
                         .address-info.grid-col-left
                             div(itemscope, itemtype='http://schema.org/Organization')
                                 div(itemprop="address" itemscope itemtype="http://schema.org/PostalAddress")
@@ -103,7 +103,7 @@ html(lang="ka")
             section.section.section-four.shop#parts
                 .container
                     h2.section--title.ka ნაწილები
-                    .grid-col-two.bg-yellow
+                    .grid-col-two.bg-grey
                         // Google map for parts shop
                         .address-map.grid-col-left
                             #mapShop

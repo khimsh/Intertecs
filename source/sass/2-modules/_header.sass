@@ -1,19 +1,18 @@
 .header
     width: 100%
-    padding: .6em 1em
-    background-color: $accent
+    height: 3.6em
+    background-color: $color-grey-light
     display: flex
     flex-direction: row
     justify-content: space-between
-    position: relative
-    h1 
+    padding: 0 4em
+    h1
         +hide-from-screen
-    img 
-        height: 2.2em
-        width: auto
-    .h--logo
+    &__logo
         z-index: 16
         position: relative
+        height: 3.6em
+        width: auto
 
 .h--cta-wrapper
     +hide-from-screen

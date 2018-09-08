@@ -10,20 +10,20 @@
   </head>
   <body id="body">
     <header class="header" id="header">
-      <div class="h--title-wrapper">
-        <h1>Intertechnics</h1><a href="#"><img class="h--logo" src="img/logo.png" alt="Intertechnics Logo"></a>
+      <div class="header__title-wrapper">
+        <h1>Intertechnics</h1><a href="#"><img class="header__logo" src="img/Logo.png" alt="Intertechnics Logo"></a>
       </div>
-      <nav class="primary-nav" id="navigation">
-        <h2 class="n--title">ნავიგაცია</h2>
-        <ul>
-          <li><a class="link scroll ka" href="#">მთავარი</a></li>
-          <li><a class="link scroll ka" href="#about">ჩვენ შესახებ</a></li>
-          <li><a class="link scroll ka" href="#equipment">ტექნიკა</a></li>
-          <li><a class="link scroll ka" href="#parts">ნაწილები</a></li>
-          <li><a class="link scroll ka link-last" href="#contact">კონტაქტი</a></li>
-          <ul class="lang">
-            <li><a class="ka link" href="/">ქართ</a></li>
-            <li><a class="en link" href="#">ENG</a></li>
+      <nav class="nav" id="navigation">
+        <h2 class="sr-only">ნავიგაცია</h2>
+        <ul class="nav__list">
+          <li class="nav__item"><a class="nav__link scroll ka" href="#">მთავარი</a></li>
+          <li class="nav__item"><a class="nav__link scroll ka" href="#about">ჩვენ შესახებ</a></li>
+          <li class="nav__item"><a class="nav__link scroll ka" href="#equipment">ტექნიკა</a></li>
+          <li class="nav__item"><a class="nav__link scroll ka" href="#parts">ნაწილები</a></li>
+          <li class="nav__item"><a class="nav__link scroll ka" href="#contact">კონტაქტი</a></li>
+          <ul class="nav__list nav__list--lang">
+            <li><a class="nav__link nav__link--white ka" href="/">ქართ</a></li>
+            <li><a class="nav__link nav__link--white en" href="#">ENG</a></li>
           </ul>
         </ul>
       </nav>
@@ -34,24 +34,19 @@
       </div>
     </header>
     <div class="hero-section">
-      <div class="hs-wrapper">
-        <h1 class="hs--title en">Intertechnics LTD</h1>
-        <p class="hs-lead ka">უმაღლესი ხარისხის სამშენებლო ტექნიკა</p>
+      <div class="hero-section__wrapper">
+        <h1 class="hero-section__title en">Intertechnics LTD</h1>
+        <p class="hero-section__lead ka">უმაღლესი ხარისხის სამშენებლო ტექნიკა</p>
       </div>
-      <div class="hero--cta animated fade-in">
-        <div itemscope itemtype="http://schema.org/Organization">
-          <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-            <p class="en phone" itemprop="telephone"><a href="tel:+995 599 50 25 17">+995 (32) 2 45 04 56</a></p>
-            <p class="envelope mail" itemprop="email"><a class="en" href="mailto:intertecs@caucasus.net">intertecs@caucasus.net</a></p>
-          </div>
-        </div>
+      <div class="hero__cta animated fade-in" itemscope itemtype="http://schema.org/Organization">
+        <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><span class="en phone" itemprop="telephone"><a href="tel:+995 599 50 25 17">+995 (32) 2 45 04 56</a></span><span class="envelope mail" itemprop="email"><a class="en" href="mailto:intertecs@caucasus.net">intertecs@caucasus.net</a></span></div>
       </div>
     </div>
     <main id="main">
       <section class="section section-one about-us" id="about">
         <div class="container">
           <h2 class="section--title ka">ჩვენ შესახებ</h2>
-          <div class="grid-col-two bg-yellow"><img class="grid-col-left hide-on-small" src="img/bobcat.jpg" alt="">
+          <div class="grid-col-two bg-grey"><img class="grid-col-left hide-on-small" src="img/bobcat.jpg" alt="">
             <div class="about-us--content grid-col-right grid-col-full">
               <p class="ka"><span class="eng">Intertechnics LTD</span>-ის მთავარი მიზანია საბაზრო წილისა და კომპეტენტუნარიანობის შენარჩუნება ცვალებად ქართულ ბაზარზე.</p>
               <p class="ka">კომპანია პარტნიორობს მოწინავე საგზაო-სამშენებლო ტექნიკის მწარმოებელ ბრენდებთან 2005 წლიდან. ეს ურთიერთობები უზრუნველყოფს ინოვაციებისა და უმაღლესი ხარისხის ტექნიკის შემოდინებას ქართულ სამშენებლო სივრცეში.</p>
@@ -133,7 +128,7 @@
       <section class="section section-three address" id="contact">
         <div class="container">
           <h1 class="section--title ka">საკონტაქტო ინფორმაცია</h1>
-          <div class="grid-col-two bg-yellow">
+          <div class="grid-col-two bg-grey">
             <div class="address-info grid-col-left">
               <div itemscope itemtype="http://schema.org/Organization">
                 <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
@@ -156,7 +151,7 @@
       <section class="section section-four shop" id="parts">
         <div class="container">
           <h2 class="section--title ka">ნაწილები</h2>
-          <div class="grid-col-two bg-yellow">
+          <div class="grid-col-two bg-grey">
             <!-- Google map for parts shop-->
             <div class="address-map grid-col-left">
               <div id="mapShop"></div>

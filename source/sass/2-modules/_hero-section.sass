@@ -3,89 +3,111 @@
   *
   */
 .hero-section
-  height: 80vh
+  height: 90vh
   width: 100%
   position: relative
-  background-image: url('../img/hero-image.jpg')
-  background-size: cover
-  background-position: center
-  border-bottom: 8px solid $accent
+  margin-bottom: 3em
+  border-bottom: .8em solid $color-grey-light
+
+  background:
+    image: url('../img/hero-image.jpg')
+    size: cover
+    position: top
+
   color: $text
   text-align: center
+
   display: flex
   align-items: center
   justify-content: center
-  margin-bottom: 3em
+
   @media (max-width: 420px)
     background-image: url('../img/hero-image-sm.jpg')
 
-  .hs-wrapper
-    border: 5px solid $text
+  &__wrapper
+    border: 5px solid $color-grey-light
     padding: 2em 2.4em
-    background-color: rgba(0,0,0,.3)
+    background-color: rgba($color-black,.3)
+
     @media (max-width: 660px)
       padding: 1.2em 1.6em
 
-    .hs--title
-      font-size: 3rem
-      font-weight: 400
-      text-transform: uppercase
-      letter-spacing: 4px
-      margin: 0
-      padding-bottom: .6em
-      @media (max-width: 960px)
-        font-size: 2rem
-      @media (max-width: 660px)
-        letter-spacing: 2px
-        font-size: 1.6rem
-      @media (max-width: 320px)
-        font-size: 1.2rem
+  &__title
+    font-size: 3rem
+    font-weight: 400
+    text-transform: uppercase
+    letter-spacing: 4px
 
-    .hs-lead
-      font-size: 1.4rem
-      letter-spacing: 3px
-      @media (max-width: 960px)
-        font-size: 1rem
-        letter-spacing: 2px
-      @media (max-width: 660px)
-        font-size: .8rem
-        letter-spacing: 1px
-      @media (max-width: 320px)
-        font-size: .6rem
+    margin: 0
+    padding-bottom: .6em
 
-  .hero--cta
-    position: absolute
-    left: 0px
-    top: 1em
-    text-align: left
-    font-size: 1.1rem
-    padding: .7em .7em .7em 1.4em
-    color: #000
-    background: $accent
-    @media (min-width: 660px)
-      animation: fadeIn 1s 2s backwards
+    @media (max-width: 960px)
+      font-size: 2rem
+
+    @media (max-width: 660px)
+      letter-spacing: 2px
+      font-size: 1.6rem
+
     @media (max-width: 320px)
-        font-size: .6rem
+      font-size: 1.2rem
 
-    a:link,
-    a:visited
-      color: #000
-      transition: all .2s linear
-      &:hover
-        color: shade($text, 30%)
+  &__lead
+    font-size: 1.4rem
+    letter-spacing: 3px
 
-    .phone:before,
-    .envelope:before
-      font-family: FontAwesome
-      color: #000
-      margin-right: 10px
-      font-size: 1.4rem
-      @media (max-width: 320px)
-        font-size: .7rem
-    .phone:before
-      content: '\f095'
-    .envelope:before
-      content: "\f0e0"
+    @media (max-width: 960px)
+      font-size: 1rem
+      letter-spacing: 2px
+
+    @media (max-width: 660px)
+      font-size: .8rem
+      letter-spacing: 1px
+
+    @media (max-width: 320px)
+      font-size: .6rem
+
+// Hero Section cta
+.hero__cta
+  position: absolute
+  left: 0px
+  top: 4em
+  padding: .4em 1.1em
+
+  text-align: left
+  background: $color-grey-light
+
+  @media (min-width: 660px)
+    animation: fadeIn 1s 2s backwards
+
+  @media (max-width: 320px)
+    font-size: .6rem
+
+  span
+    display: block
+
+  a:link,
+  a:visited
+    color: $color-grey
+    font-size: 1rem
+    font-weight: 600
+    transition: all .2s linear
+    &:hover
+      color: $color-red
+
+  .phone:before,
+  .envelope:before
+    font-family: FontAwesome
+    color: $color-grey
+    margin-right: .8em
+    font-size: 1.2rem
+
+    @media (max-width: 320px)
+      font-size: .7rem
+
+  .phone:before
+    content: '\f095'
+  .envelope:before
+    content: "\f0e0"
 
 @keyframes fadeIn
   0%

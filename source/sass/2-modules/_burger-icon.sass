@@ -1,43 +1,48 @@
 .burger-icon
+  position: absolute
+  top: 11px
+  right: 4em
+  height: 34px
+  width: 42px
+  cursor: pointer
+  display: none
+  z-index: 16
+
+  .bar-top,
+  .bar-middle,
+  .bar-bottom
     position: absolute
-    top: 11px
-    right: 18px
-    height: 34px
-    width: 42px
-    cursor: pointer
-    display: none
-    z-index: 16
-    .bar-top,
-    .bar-middle,
-    .bar-bottom
-        position: absolute
-        height: 6px
-        width: 100%
-        background-color: #000
-        transition: all .2s ease-in-out
+    height: 6px
+    width: 100%
+    background-color: $color-grey
+    transition: all .2s ease-in-out
+
+  .bar-top
+    top: 0
+
+  .bar-middle
+    top: 50%
+    transform: translateY(-50%)
+    opacity: 1
+
+  .bar-bottom
+    bottom: 0
+
+  &.closed
     .bar-top
-        top: 0
+      transform-origin: 0 0
+      transform: rotate(45deg)
+      top: 0px
+      width: 48px
+      left: 6px
     .bar-middle
-        top: 50%
-        transform: translateY(-50%)
-        opacity: 1
+      opacity: 0
     .bar-bottom
-        bottom: 0  
-    &.closed
-        .bar-top
-            transform-origin: 0 0
-            transform: rotate(45deg)
-            top: 0px
-            width: 48px
-            left: 6px
-        .bar-middle
-            opacity: 0
-        .bar-bottom
-            transform-origin: 0 0
-            transform: rotate(-45deg)
-            bottom: -5px
-            width: 48px
-    @media (max-width: 860px)
-        display: block
-    
-    
+      transform-origin: 0 0
+      transform: rotate(-45deg)
+      bottom: -5px
+      width: 48px
+
+  @media (max-width: 900px)
+    display: block
+
