@@ -1,7 +1,7 @@
 // Load Google Maps
 function initMap() {
-  var intertecs = {lat: 41.710038, lng: 44.754758};
-  var map = new google.maps.Map(document.getElementById('map'), {
+  var intertecs = { lat: 41.710038, lng: 44.754758 };
+  var map = new google.maps.Map(document.getElementById("map"), {
     zoom: 16,
     center: intertecs
   });
@@ -9,8 +9,9 @@ function initMap() {
     position: intertecs,
     map: map
   });
-  var shop = {lat: 41.790404, lng: 44.755072};
-  var mapShop = new google.maps.Map(document.getElementById('mapShop'), {
+
+  var shop = { lat: 41.790404, lng: 44.755072 };
+  var mapShop = new google.maps.Map(document.getElementById("mapShop"), {
     zoom: 14,
     center: shop
   });
@@ -19,5 +20,3 @@ function initMap() {
     map: mapShop
   });
 }
-
-

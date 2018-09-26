@@ -31,9 +31,10 @@ html(lang="ka")
                     li.nav__item: a(href="#equipment").nav__link.scroll.ka ტექნიკა
                     li.nav__item: a(href="#parts").nav__link.scroll.ka ნაწილები
                     li.nav__item: a(href="#contact").nav__link.scroll.ka კონტაქტი
-                    ul.nav__list.nav__list--lang
-                        li: a(href="/").nav__link.nav__link--white.ka ქართ
-                        li: a(href="#").nav__link.nav__link--white.en ENG
+                    li.nav__item
+                        ul.nav__list--lang
+                            li: a(href="/").nav__link.nav__link--white.ka ქართ
+                            li: a(href="#").nav__link.nav__link--white.en ENG
 
             .burger-icon
                 .bar-top
@@ -119,13 +120,14 @@ html(lang="ka")
                 .pop-up-content-wrapper
                     h3.pop-up-header.ka სიახლე!
                     p.pop-up-content.ka დიღომში, პეტრე იბერის ქუჩაზე გაიხსნა სამშენებლო ტექნიკის ნაწილების მაღაზია.
-                    a(href="#parts" id="btn-redirect" class="ka scroll") დეტალების ნახვა
+                    a(href="#parts")#btn-redirect.ka.scroll დეტალების ნახვა
 
         .scroll-to-top#scroll-to-top
             a(href="#body").scroll: i.fa.fa-angle-double-up
 
-        footer#footer
-            p.copyright.en &copy; Intertecs.ge &#9679; 2018
+        footer#footer.footer
+            //- p.footer__developer.en dev: #[a(href="mailto:ia_khimsho@test.com").en ia_khimsho]
+            p.footer__copyright.en &copy; Intertecs.ge &#9679; 2018
             // Top.ge counter
             div#top-ge-counter-container(data-site-id="108307")
             script(async src="//counter.top.ge/counter.js")

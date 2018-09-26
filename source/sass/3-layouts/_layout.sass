@@ -1,12 +1,10 @@
-/**********************
-  * Layout Styles
-  *********************/
+// Layout Styles
 .container
   width: 85vw
-  margin: 0 auto 
-  @media (min-width: 1400px)
+  margin: 0 auto
+  @media only screen and (min-width: 1400px)
     width: 65vw
-  
+
 @supports (display: grid)
   .grid-col-three
     width: 100%
@@ -14,14 +12,14 @@
     grid-template-columns: repeat(3, 1fr)
     grid-column-gap: 1.6em
     grid-row-gap: 1.4em
-    @media (max-width: 960px)
+    @media only screen and (max-width: 960px)
       grid-template-columns: repeat(2, 1fr)
-    @media (max-width: 660px)
+    @media only screen and (max-width: 660px)
       width: 65vw
       margin: 0 auto
       grid-template-columns: 1fr
       grid-column-gap: 0
-    @media (max-width: 420px)
+    @media only screen and (max-width: 420px)
       width: 85vw
     .article
       width: auto
@@ -32,13 +30,15 @@
     grid-template-columns: repeat(2, 1fr)
     grid-column-gap: 1.6em
     margin-bottom: 4em
-    @media (max-width: 960px)
+    @media only screen and (max-width: 960px)
       margin: 0 auto
       width: 70vw
       grid-template-columns: 1fr
       margin-bottom: 4em
       grid-column-gap: 0
-    @media (max-width: 320px)
+    @media only screen and (max-width: 960px)
+      width: 80vw
+    @media only screen and (max-width: 320px)
       width: 85vw
     .address-map
       width: 100%
@@ -50,7 +50,7 @@
 
   .grid-col-left
     grid-column: 1/2
-    @media (max-width: 960px)
+    @media only screen and (max-width: 960px)
       grid-column: 1/2
 
   .grid-col-right
